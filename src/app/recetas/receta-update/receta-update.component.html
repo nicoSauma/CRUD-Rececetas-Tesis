@@ -1,0 +1,164 @@
+<app-nav-bar-login></app-nav-bar-login>
+
+<form [formGroup]="formulario" (ngSubmit)="updateRecipe()">
+  <span class="titulo">Crear receta</span>
+
+    <!-- Título -->
+     <div class="datos">
+      <label>
+        Título
+        <input formControlName="title" type="text" />
+      </label>
+
+     </div>
+
+    <div *ngIf="formulario.get('title')?.invalid && formulario.get('title')?.touched">
+      <span class="requerido">*Titulo requerido</span>
+    </div>
+
+    <!-- Checkboxes para vegetariano, vegano y sin gluten -->
+     <div class="datos-box">
+      <label>
+        Vegetariano:
+        <input formControlName="vegetarian" type="checkbox" />
+      </label>
+
+      <label>
+        Vegano:
+        <input formControlName="vegan" type="checkbox" />
+      </label>
+
+      <label>
+        Sin gluten:
+        <input formControlName="glutenFree" type="checkbox" />
+      </label>
+     </div>
+
+     <div class="datos">
+      <h3 class="ingredientesTitulo">Ingredientes</h3>
+      <div class="ingredientes-contenedor" formArrayName="ingredientes">
+        <div *ngFor="let ingrediente of ingredientes.controls; let i = index" [formGroupName]="i" class="ingrediente-item">
+          <div>
+            <label>
+              Nombre:
+              <input formControlName="name" type="text" />
+            </label>
+            <label>
+              Cantidad:
+              <input formControlName="amount" type="number" min="0.1" />
+            </label>
+            <label>
+              Unidad:
+              <input formControlName="unit" type="text" />
+            </label>
+          </div>
+          <button type="button" (click)="eliminarIngrediente(i)">Eliminar</button>
+        </div>
+      </div>
+      <button type="button" class="add-ingredient-button" (click)="agregarIngrediente()">Agregar ingrediente</button>
+    </div>
+
+
+    <!-- Tiempo de preparación -->
+
+    <div class="datos">
+      <label>
+        Tiempo de preparación (minutos)
+        <input formControlName="readyInMinutes" type="number" />
+      </label>
+      <div *ngIf="formulario.get('readyInMinutes')?.invalid && formulario.get('readyInMinutes')?.touched">
+        <span class="requerido">*Tiempo minimo de preparacion: 1 minuto</span>
+      </div>
+    </div>
+
+
+
+    <!-- Porciones -->
+     <div class="datos">
+      <label>
+        Porciones
+        <input formControlName="servings" type="number" />
+      </label>
+      <div *ngIf="formulario.get('servings')?.invalid && formulario.get('servings')?.touched">
+        <span class="requerido">*Minimo de porciones: 1</span>
+      </div>
+     </div>
+
+
+    <!-- Instrucciones -->
+     <div class="datos">
+      <label>
+        Instrucciones
+        <textarea formControlName="instructions"></textarea>
+      </label>
+      <div *ngIf="formulario.get('instructions')?.invalid && formulario.get('instructions')?.touched">
+        <span class="requerido">*Las instrucciones son requeridas</span>
+      </div>
+     </div>
+
+
+    <!-- Imagen -->
+     <div class="datos">
+      <label>
+        Imagen
+      </label>
+      <div class="imagen-container">
+        <div>
+          <input formControlName="image" type="text" placeholder="URL de la imagen" />
+          <label for="imageFile" class="upload-icon-label" title="Subir foto">
+            📤
+          </label>
+          <button type="button" class="delete-image-button" (click)="clearImage()" title="Eliminar foto">✕</button>
+        </div>
+        <input 
+          #imageFile
+          id="imageFile"
+          type="file" 
+          accept="image/*" 
+          (change)="onImageSelected($event)" 
+          class="image-file-input"
+        />
+      </div>
+     </div>
+
+
+    <!-- Puntuación -->
+    <div class="datos">
+      <label>
+        Puntuación (0-100)
+        <input formControlName="spoonacularScore" type="number" min="0" max="100" />
+      </label>
+      <div *ngIf="formulario.get('spoonacularScore')?.invalid && formulario.get('spoonacularScore')?.touched">
+        <span class="requerido">*Ingresa un valor entre 0 y 100</span>
+      </div>
+    </div>
+
+
+      <!-- seleccionar lista -->
+     <div class="datos">
+      <label for="listaId">Selecciona una lista:</label>
+      <select id="listaId" formControlName="listaId" class="lista-select">
+        <option value="0" disabled selected>Selecciona una lista</option>
+        <option *ngFor="let lista of userComun.listas" [value]="lista.id">{{ lista.nombre }}</option>
+      </select>
+     </div>
+
+
+    <!-- Botón para guardar receta -->
+    <button type="submit" [disabled]="formulario.invalid">Guardar receta</button>
+    
+    <!-- Mensaje de campos obligatorios sin completar -->
+    <div *ngIf="formulario.invalid" class="validation-error-banner">
+      <p>⚠️ Faltan campos obligatorios por completar</p>
+    </div>
+
+
+
+</form>
+<app-footer></app-footer>
+
+
+
+
+
+

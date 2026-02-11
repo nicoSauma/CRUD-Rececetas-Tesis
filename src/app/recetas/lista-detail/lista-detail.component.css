@@ -1,0 +1,85 @@
+footer {
+  margin-top: auto;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #f7cf79;
+  color: #555;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100vh;
+min-height: 100vh;
+}
+.titulo{
+  font-size: 45px;
+  margin-top: 10px;
+  font-weight: 600;
+  font-family: 'Monserrat', sans-serif;
+  color: #7e654e;
+  margin-bottom: 10px;
+}
+.info-receta{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(241, 232, 232, 0.5);
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 15px;
+  color:  #7e654e;
+}
+.nombre-lista{
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  margin-top: 10px;
+  color:  #7e654e;
+  margin: 0;
+}
+
+.nombre-lista-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-ordenar {
+  background-color: #e09422;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-ordenar:hover {
+  background-color: #d68818;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-ordenar:active {
+  transform: translateY(0);
+}
+
+.botones{
+  display: flex;
+  flex-direction: column;
+}
+.cont-recetas{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}

@@ -1,0 +1,555 @@
+{
+  "UsuarioActivo": [
+    {
+      "id": "e237",
+      "nombreUsuario": "prueba"
+    }
+  ],
+  "Usuarios": [
+    {
+      "id": "e237",
+      "nombreUsuario": "prueba",
+      "contrasena": "prueba123",
+      "email": "prueba@gmail.com",
+      "listas": [
+        {
+          "id": 0,
+          "nombre": "Favoritos",
+          "recetas": [
+            {
+              "vegetarian": false,
+              "vegan": false,
+              "glutenFree": false,
+              "title": "Layered Baked Eggplant Parmesan",
+              "readyInMinutes": 60,
+              "servings": 4,
+              "image": "https://img.spoonacular.com/recipes/649340-556x370.jpg",
+              "instructions": "<ol><li>Preheat oven to 375 degrees Fahrenheit. Place a sheet of aluminum foil on baking sheet. Spray with olive oil cooking spray. Slice ends off of eggplant and peel skin off with a vegetable peeler. Slice into  inch pieces.</li><li>In a shallow container, add eggs and water. Whisk to combine. In a separate container, add breadcrumbs, Italian seasoning and onion powder. Mix together. Dip eggplant slices into egg mixture. Let excess drip off and then dip into breadcrumbs. Coat evenly with breadcrumbs, pressing them onto the sides.</li><li>Place on baking sheet. Spray tops lightly with olive oil spray. Place in oven and cook for 20 minutes. Flip over and cook for another 20 minutes, until the tops are golden brown.</li><li>Remove from oven. In a 8 by 8 baking sheet, add  a cup of tomato sauce to the bottom spread evenly. Add 4 slices eggplant. Top with  cup cheese and  cup shredded Parmesan cheese. Add 3 more layers of sauce, eggplant and cheese.</li><li>Place back in oven and bake till cheese gets slightly browned on top, about 15 minutes. ENJOY!</li></ol>",
+              "spoonacularScore": 70.264892578125,
+              "id": 649340,
+              "ingredientes": [
+                {
+                  "name": "breadcrumbs",
+                  "unit": "cup",
+                  "amount": 1
+                },
+                {
+                  "name": "eggplants",
+                  "unit": "medium",
+                  "amount": 2
+                },
+                {
+                  "name": "eggs",
+                  "unit": "large",
+                  "amount": 2
+                },
+                {
+                  "name": "seasoning",
+                  "unit": "tsp",
+                  "amount": 2
+                },
+                {
+                  "name": "onion powder",
+                  "unit": "tsp",
+                  "amount": 2
+                },
+                {
+                  "name": "parmesan cheese",
+                  "unit": "cup",
+                  "amount": 1
+                },
+                {
+                  "name": "mozzarella cheese",
+                  "unit": "cups",
+                  "amount": 2
+                },
+                {
+                  "name": "tomato sauce",
+                  "unit": "oz",
+                  "amount": 25
+                },
+                {
+                  "name": "water",
+                  "unit": "TBSP",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "vegetarian": true,
+              "vegan": false,
+              "glutenFree": true,
+              "title": "How to Make an Amazing Bacon Wrapped Stuffed Chicken Breast",
+              "readyInMinutes": 75,
+              "servings": 4,
+              "image": "https://img.spoonacular.com/recipes/1056442-556x370.jpg",
+              "instructions": "Instructions\n\n\n\nHeat oven to 375\n\n\nClean and dry chicken breast. (Drying the chicken makes slicing the chicken easier.)\n\n\nSlice the chicken breast lengthwise. \n\n\nAdd the dressing to the chicken breast. Close as best as you can. \n\n\nWrap the bacon around the stuffed chicken breast, layering the bacon edges as you wrap. \n\n\nBake in the oven for 1 hour, or until internal temperature reaches 165F. \n\n\nRemove from oven, allow to cool for 5 minutes. \n\n\nServe with your favorite sides.",
+              "spoonacularScore": 54.130882263183594,
+              "id": 1056442,
+              "ingredientes": [
+                {
+                  "name": "wright brand hickory bacon",
+                  "amount": 1,
+                  "unit": "package"
+                },
+                {
+                  "name": "chicken breasts",
+                  "amount": 4,
+                  "unit": "f"
+                },
+                {
+                  "name": "dressing fully",
+                  "amount": 4,
+                  "unit": "servings"
+                }
+              ],
+              "listaId": 0
+            },
+            {
+              "vegetarian": false,
+              "vegan": false,
+              "glutenFree": false,
+              "title": "Delicious Homemade Chocolate Oreos",
+              "readyInMinutes": 90,
+              "servings": 25,
+              "image": "https://img.spoonacular.com/recipes/641395-556x370.jpg",
+              "instructions": "<ol><li>Set two racks in the middle of the oven. Preheat to 375F.</li><li>In a food processor, or bowl of an electric mixer, thoroughly mix the flour, cocoa, baking soda and powder, salt, and sugar. While pulsing, or on low speed, add the butter, and then the egg. Continue processing or mixing until dough comes together in a mass.</li><li>Take rounded teaspoons of batter and place on a parchment paper-lined baking sheet approximately two inches apart. (I started off with loonie sized chunks of dough which was too big. Its more like the size of a quarter. Remember, youre aiming for 50 to 60 of these individual wafers!) With moistened hands, slightly flatten the dough. Bake for 9 minutes, rotating once for even baking. Set baking sheets on a rack to cool.</li><li>To make the cream, place butter and shortening in a mixing bowl, and at low speed, gradually beat in the sugar and vanilla. Turn the mixer on high and beat for 2 to 3 minutes until filling is light and fluffy.</li><li>To assemble the cookies, in a pastry bag with a 1/2 inch, round tip, pipe teaspoon-size blobs of cream into the center of one cookie. Place another cookie, equal in size to the first, on top of the cream. Lightly press, to work the filling evenly to the outsides of the cookie. (I dont think its entirely necessary to use a pastry bag. You could just spoon some icing on and squeeze between two wafers.) Continue this process until all the cookies have been sandwiched with cream.</li></ol>",
+              "spoonacularScore": 4.50180196762085,
+              "id": 641395,
+              "ingredientes": [
+                {
+                  "name": "baking powder",
+                  "unit": "teaspoon",
+                  "amount": 0.25
+                },
+                {
+                  "name": "baking soda",
+                  "unit": "teaspoon",
+                  "amount": 1
+                },
+                {
+                  "name": "dutch process cocoa",
+                  "unit": "cup",
+                  "amount": 0.5
+                },
+                {
+                  "name": "egg",
+                  "unit": "large",
+                  "amount": 1
+                },
+                {
+                  "name": "flour",
+                  "unit": "cups",
+                  "amount": 1.25
+                },
+                {
+                  "name": "icing sugar",
+                  "unit": "cups",
+                  "amount": 2
+                },
+                {
+                  "name": "salt",
+                  "unit": "teaspoon",
+                  "amount": 0.25
+                },
+                {
+                  "name": "sugar",
+                  "unit": "cup",
+                  "amount": 1
+                },
+                {
+                  "name": "butter",
+                  "unit": "cup",
+                  "amount": 0.75
+                },
+                {
+                  "name": "vanilla extract",
+                  "unit": "teaspoons",
+                  "amount": 2
+                },
+                {
+                  "name": "vegetable shortening",
+                  "unit": "cup",
+                  "amount": 0.25
+                }
+              ]
+            },
+            {
+              "vegetarian": false,
+              "vegan": false,
+              "glutenFree": false,
+              "title": "Blueberry Cobbler",
+              "readyInMinutes": 45,
+              "servings": 8,
+              "image": "https://img.spoonacular.com/recipes/635444-556x370.jpg",
+              "instructions": "<ol><li>In a large bowl stir together the cornstarch, sifted, and the granulated sugar and add the blueberries and the lemon juice. Toss the mixture until</li><li>It is combined well and transfer it to a buttered 10-inch (6-cup) deep- dish pie plate. In a bowl combine well the flour, the brown sugar, forced</li><li>Through a sieve, the baking powder, the salt, and the cinnamon, add the butter, and blend the mixture until it resembles coarse meal. Add 1/4 cup</li><li>Plus 2 tablespoons boiling water and stir the mixture until it just forms a dough. Drop 1/4 cupfuls of the dough over the blueberry mixture and bake the cobbler on a baking sheet in the middle of a preheated 400F.</li><li>Oven for 30 to 40 minutes, or until the topping is golden and cooked through. Serve the cobbler warm with the ice cream.</li><li>Serves 6.</li></ol>",
+              "spoonacularScore": 1.0282505750656128,
+              "id": 635444,
+              "ingredientes": [
+                {
+                  "name": "double-acting baking powder",
+                  "unit": "teaspoon",
+                  "amount": 1
+                },
+                {
+                  "name": "blueberries",
+                  "unit": "quart",
+                  "amount": 1
+                },
+                {
+                  "name": "firmly brown sugar",
+                  "unit": "cup",
+                  "amount": 1
+                },
+                {
+                  "name": "cinnamon",
+                  "unit": "teaspoon",
+                  "amount": 1
+                },
+                {
+                  "name": "cornstarch",
+                  "unit": "tablespoons",
+                  "amount": 3
+                },
+                {
+                  "name": "flour",
+                  "unit": "cup",
+                  "amount": 1
+                },
+                {
+                  "name": "granulated sugar",
+                  "unit": "cup",
+                  "amount": 1
+                },
+                {
+                  "name": "lemon juice",
+                  "unit": "tablespoons",
+                  "amount": 2
+                },
+                {
+                  "name": "salt",
+                  "unit": "servings",
+                  "amount": 8
+                },
+                {
+                  "name": "butter",
+                  "unit": "tablespoons",
+                  "amount": 2
+                },
+                {
+                  "name": "whipped cream",
+                  "unit": "servings",
+                  "amount": 8
+                }
+              ]
+            },
+            {
+              "vegetarian": false,
+              "vegan": false,
+              "glutenFree": false,
+              "title": "Saucy Shredded Barbecue Chicken",
+              "readyInMinutes": 480,
+              "servings": 4,
+              "image": "https://img.spoonacular.com/recipes/659316-556x370.jpg",
+              "instructions": "<ol><li>In a crockpot spray the bottom and side with cooking spray.  Add your chicken and barbecue sauce.  Cook on low for 8-10 hours or on high for 4-5 hours.</li><li>During the last hour of cooking, I like to shred the chicken with two forks.  Just pull them apart.  The chicken should shred very easily.</li></ol>",
+              "spoonacularScore": 56.42945098876953,
+              "id": 659316,
+              "ingredientes": [
+                {
+                  "name": "barbecue sauce",
+                  "unit": "oz",
+                  "amount": 12
+                },
+                {
+                  "name": "chicken breasts",
+                  "unit": "lbs",
+                  "amount": 1
+                },
+                {
+                  "name": "hamburger buns",
+                  "unit": "",
+                  "amount": 4
+                }
+              ]
+            },
+            {
+              "vegetarian": true,
+              "vegan": true,
+              "glutenFree": true,
+              "title": "Curried Butternut Squash and Apple Soup",
+              "readyInMinutes": 45,
+              "servings": 1,
+              "image": "https://img.spoonacular.com/recipes/641057-556x370.jpg",
+              "instructions": "Get ready two small saucepans.\nIn one have together 1/2 of the squash and 1/2 of the apple  bring to a simmer, and simmer until just tender when pierced with a fork.\nIn the other, add in the rest of the vegetables along with 1 cup of water  bring this to a rolling boil, reduce to a simmer, and simmer until very very tender. When very tender, remove the vegetables from the heat, and blend these vegetables together (without draining) with the Braggs, spices, sriracha and the additional 1/2 cup water.\nMix the blended part of the soup with the simmered squash and apples. Mix in the cubed tofu, gently re-heat and serve.",
+              "spoonacularScore": 96.38311767578125,
+              "id": 641057,
+              "ingredientes": [
+                {
+                  "name": "cauliflower",
+                  "unit": "oz",
+                  "amount": 3.5
+                },
+                {
+                  "name": "butternut squash",
+                  "unit": "oz",
+                  "amount": 2.5
+                },
+                {
+                  "name": "apple",
+                  "unit": "oz",
+                  "amount": 2
+                },
+                {
+                  "name": "water",
+                  "unit": "cup",
+                  "amount": 1
+                },
+                {
+                  "name": "braggs liquid aminos",
+                  "unit": "tsp",
+                  "amount": 2
+                },
+                {
+                  "name": "curry powder",
+                  "unit": "tsp",
+                  "amount": 0.5
+                },
+                {
+                  "name": "ginger powder",
+                  "unit": "tsp",
+                  "amount": 0.25
+                },
+                {
+                  "name": "a squirt sriracha",
+                  "unit": "tsp",
+                  "amount": 0.125
+                },
+                {
+                  "name": "block lite tofu",
+                  "unit": "",
+                  "amount": 0.125
+                }
+              ]
+            },
+            {
+              "vegetarian": true,
+              "vegan": false,
+              "glutenFree": true,
+              "title": "Warm Quinoa Spinach and Shiitake Salad",
+              "readyInMinutes": 45,
+              "servings": 6,
+              "image": "https://img.spoonacular.com/recipes/664969-556x370.jpg",
+              "instructions": "<ol><li>In saucepan, bring chicken broth to a boil. Stir in quinoa and contents of seasoning pouch. Reduce heat to low, cover and simmer for 12 to 15 minutes or until tender. Remove from heat; let stand, covered, for 5 minutes. Fluff with a fork.</li><li>In large nonstick frying pan, heat oil over medium heat; cook shallots and red pepper for 4 to 6 minutes, stirring occasionally, or until lightly golden and softened. Stir in mushrooms; cook, stirring occasionally, for 6 to 8 minutes or until mushrooms have released their juices and are starting to turn golden. Add vinegar; cook, stirring to bring up browned bits, for 1 minute. Stir in spinach; cook, stirring, for 2 minutes or just until wilted. Stir in salt and pepper. Remove from heat.</li><li>In large bowl, toss quinoa with warm spinach mixture. Serve sprinkled with feta.</li><li>More recipe ideas are available online at pc.ca.</li></ol>",
+              "spoonacularScore": 90.66741180419922,
+              "id": 664969,
+              "ingredientes": [
+                {
+                  "name": "baby spinach",
+                  "unit": "cups",
+                  "amount": 6
+                },
+                {
+                  "name": "pepper",
+                  "unit": "servings",
+                  "amount": 6
+                },
+                {
+                  "name": "chicken broth",
+                  "unit": "mL",
+                  "amount": 500
+                },
+                {
+                  "name": "feta cheese",
+                  "unit": "mL",
+                  "amount": 50
+                },
+                {
+                  "name": "olive oil",
+                  "unit": "servings",
+                  "amount": 6
+                },
+                {
+                  "name": "bell pepper",
+                  "unit": "mL",
+                  "amount": 125
+                },
+                {
+                  "name": "red wine vinegar",
+                  "unit": "tablespoons",
+                  "amount": 2
+                },
+                {
+                  "name": "pc organics roasted garlic and herbs quinoa",
+                  "unit": "g",
+                  "amount": 225
+                },
+                {
+                  "name": "salt",
+                  "unit": "pinch",
+                  "amount": 1
+                },
+                {
+                  "name": "shallots",
+                  "unit": "",
+                  "amount": 2
+                },
+                {
+                  "name": "shiitake mushrooms",
+                  "unit": "g",
+                  "amount": 180
+                }
+              ]
+            },
+            {
+              "id": 7,
+              "title": "fd",
+              "vegetarian": false,
+              "vegan": false,
+              "glutenFree": false,
+              "readyInMinutes": 1,
+              "servings": 1,
+              "instructions": "sds",
+              "image": "img/logoUltimo.jpeg",
+              "spoonacularScore": 21,
+              "listaId": "0",
+              "ingredientes": [
+                {
+                  "name": "sd",
+                  "amount": 0.1,
+                  "unit": "sd"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "nombre": "bb",
+          "recetas": [
+            {
+              "vegetarian": true,
+              "vegan": false,
+              "glutenFree": false,
+              "title": "White cake with marzipan and almonds",
+              "readyInMinutes": 45,
+              "servings": 10,
+              "image": "https://img.spoonacular.com/recipes/665155-556x370.jpg",
+              "instructions": "<ol><li>Beat egg whites and only 2 tablespoons of sugar into stiff peaks.</li><li>Mix the remaining sugar, flour, corn starch and baking powder in a separate bowl.</li><li>Sift the flour and sugar mixture into the egg whites; stir very gently the mixture until smooth.</li><li>Stir in the melted butter.</li><li>Add half of the marzipan and amaretto, mix and combine.</li><li>Pour the mixture into a suitable silicon mould (or regular round shape greased and sprinkled with bread crumbs).</li><li>Sprinkle the top with the rest of the marzipan and sliced almonds.</li><li>Bake the cake in the oven at 180C for 30 - 40 minutes or until done (the trick with a toothpick).</li><li>Let it completely cool in the mould, then turn onto a serving plate.</li></ol>",
+              "spoonacularScore": 100,
+              "id": 665155,
+              "ingredientes": [
+                {
+                  "name": "almonds",
+                  "amount": 50,
+                  "unit": "g"
+                },
+                {
+                  "name": "amaretto liqueur",
+                  "amount": 1,
+                  "unit": "Tbs"
+                },
+                {
+                  "name": "baking powder",
+                  "amount": 3,
+                  "unit": "teaspoons"
+                },
+                {
+                  "name": "butter",
+                  "amount": 1,
+                  "unit": "cup"
+                },
+                {
+                  "name": "cornstarch",
+                  "amount": 1,
+                  "unit": "Tbs"
+                },
+                {
+                  "name": "egg whites",
+                  "amount": 4,
+                  "unit": "large"
+                },
+                {
+                  "name": "flour",
+                  "amount": 2,
+                  "unit": "cups"
+                },
+                {
+                  "name": "marzipan",
+                  "amount": 100,
+                  "unit": "g"
+                },
+                {
+                  "name": "sugar",
+                  "amount": 250,
+                  "unit": "g"
+                }
+              ],
+              "listaId": 2
+            },
+            {
+              "vegetarian": false,
+              "vegan": false,
+              "glutenFree": true,
+              "title": "Ahi Tuna Ceviche",
+              "readyInMinutes": 45,
+              "servings": 3,
+              "image": "https://img.spoonacular.com/recipes/632021-556x370.jpg",
+              "instructions": "<ol><li>In medium bowl mix soy sauce, toasted sesame oil, rice vinegar, Serrano pepper, lime juice, mint, and sesame seeds. Then add diced tuna and toss to coat.</li><li>The tuna is ready to eat as soon as it's tossed and coated but you can marinate it for a few minutes if desired. The tuna will start to turn white almost immediately, a sign that it is cooking from the acidity of the lime juice. It is not necessary to cook the tuna. In fact, it is best served immediately while it is melt-in-your-mouth tender and moist.</li><li>Serve immediately by mounding atop crackers, chips, micro-greens, or even roasted sweet potato slices.</li></ol>",
+              "spoonacularScore": 80,
+              "id": 632021,
+              "ingredientes": [
+                {
+                  "name": "ahi tuna steak",
+                  "amount": 1,
+                  "unit": "f"
+                },
+                {
+                  "name": "mint",
+                  "amount": 5,
+                  "unit": "small leaves"
+                },
+                {
+                  "name": "juice of lime",
+                  "amount": 0.5,
+                  "unit": "f"
+                },
+                {
+                  "name": "juice of lime",
+                  "amount": 1,
+                  "unit": "f"
+                },
+                {
+                  "name": "serrano pepper",
+                  "amount": 0.5,
+                  "unit": "f"
+                },
+                {
+                  "name": "sesame oil",
+                  "amount": 1,
+                  "unit": "tsp"
+                },
+                {
+                  "name": "in bowl mix soy sauce",
+                  "amount": 3,
+                  "unit": "servings"
+                },
+                {
+                  "name": "soy sauce",
+                  "amount": 5,
+                  "unit": "tbsp"
+                },
+                {
+                  "name": "even roasted sweet potato",
+                  "amount": 1,
+                  "unit": "slices"
+                }
+              ],
+              "listaId": 2
+            }
+          ]
+        }
+      ],
+      "fotoPerfil": "img/perfil-de-usuario.webp"
+    }
+  ]
+}

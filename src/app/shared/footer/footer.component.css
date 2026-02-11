@@ -1,0 +1,90 @@
+footer{
+    margin-top: 200px;
+    background-color: rgba(242, 216, 161, 0.46);
+    border-top: 1px solid rgb(238, 228, 228);
+    margin-top: 50px;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+ul li{
+    list-style: none;
+}
+
+
+.derechos{
+    font-size: 20px;
+    color: rgb(92, 87, 87);
+    border-bottom: 1px solid rgb(196, 150, 66);
+    border-top: 1px solid rgb(196, 150, 66);
+    font-family: 'Montserrat', sans-serif;
+}
+.titulo-redes{
+    font-size: 22px;
+    color:rgb(202, 28, 28);
+    border-bottom: 1px solid rgb(196, 150, 66);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+
+}
+
+.info1 ul li{
+    margin-top: 5px;
+}
+
+.info1 ul li a{
+    color: rgb(92, 87, 87);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.info1 ul li a:hover{
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+.social-links{
+  margin: 14px;
+
+
+}
+
+.social-links a{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  transition: .4s;
+  justify-content: center; /* Centra los íconos */
+  align-items: center;
+  margin: 0 10px;
+}
+
+.social-links a:hover{
+  transform: scale(1.7);
+
+}
+
+.social-links a i{
+  color: #b6702e;
+
+
+}
+
+@media screen and (max-width: 600px) {
+  .team {
+      max-width: 100%;
+  }
+}
+.sub-us{
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 0;
+
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links ul li {
+  display: inline-block;
+}

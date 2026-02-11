@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+
+<h1 class="titulo">Bon APPetit</h1>
+
+
+<section class="section-form">
+
+    <div class="contenedor-img">
+       <img src="/img/logoUltimo.jpeg" alt="Logo">
+    </div>
+
+    <form id="formulario" [formGroup]="form" (ngSubmit)="onLogin()">
+
+
+            <section class="contenedor-datos">
+                <div class="div-input">
+                    <label  class="ingresar-datos" for="username">Nombre de Usuario</label>
+                    <input type="text" id="username" autocomplete="username" formControlName="username">
+                </div>
+                @if (form.controls['username'].getError('required')) {
+                    <span class="requerido">*Campo requerido</span>
+                }
+
+            </section>
+
+            <section class="contenedor-datos">
+                <div class="div-input">
+                <label class="ingresar-datos" for="password">Contraseña</label>
+                <input #password type="password" id="password" formControlName="password">
+
+            </div>
+            @if (form.controls['password'].getError('required')) {
+                <span class="requerido">*Campo requerido</span>
+            }
+          
+
+            <button class="reveal" type="button" (click)="onRevealPassword(password)">ojo</button>
+            </section>
+
+            <button type="submit" [disabled]="form.invalid" class="btn">Iniciar sesión</button>
+
+    </form>
+
+
+
+
+</section>
+
+<footer>
+    <div class="info1">
+        <p id="titulo-redes">Redes</p>
+        <ul>
+
+            <li>
+                <a href="" target="_blank">GitHub</a>
+            </li>
+            <li>
+                <a href="" target="_blank">Instagram</a>
+            </li>
+            <li>
+                <a href="" target="_blank">Facebook</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="info2">
+        <h4 class="derechos">Todos los derechos reservados</h4>
+    </div>
+
+</footer>
+
+
+
+

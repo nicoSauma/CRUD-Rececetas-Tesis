@@ -1,0 +1,37 @@
+<app-nav-bar-login></app-nav-bar-login>
+
+<section>
+  <h3 class="titulo">Recetas</h3>
+
+  <div class="info-receta">
+    
+    <div class="nombre-lista-container">
+      <p class="nombre-lista">{{lista?.nombre}}</p>
+      <button class="btn-ordenar" (click)="ordenarPorPuntuacion()" title="Ordenar por puntuación">
+        Ordenar por puntuación ↓
+      </button>
+    </div>
+    <ul>
+
+
+          <div class="botones">
+
+            @for (receta of recetasarreglo; track receta.id) {
+              <app-delete-update-output
+            [receta]="receta"
+            [listaId]="lista?.id ?? 0"
+            (delete)="deleterecipe22($event)"
+            (update)="onUpdate($event)"
+            (detalles)="navigateToDetails($event)">
+          </app-delete-update-output>
+            }
+
+          </div>
+
+
+    </ul>
+
+  </div>
+</section>
+
+

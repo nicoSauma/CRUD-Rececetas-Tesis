@@ -1,0 +1,58 @@
+
+
+<div class="buscador-container">
+  <app-nav-bar-login></app-nav-bar-login>
+
+  <section>
+
+    <div class="buscador-section">
+      <h2>Buscador de recetas</h2>
+
+      <form [formGroup]="formulario" (ngSubmit)="setIngredientes()" class="form-busqueda">
+        <div class="input-group">
+          <input type="text" name="ingredientes" id="ingredientes" formControlName="ingredientes" placeholder="Escribe ingredientes...">
+          <button type="submit" class="btn-buscar" (click)="contenedorRecetas = true">Buscar</button>
+        </div>
+
+        <div class="filtros-section">
+          <h3>Filtros</h3>
+          <div class="filtros-container">
+            <label class="filtro-label"><input type="checkbox" formControlName="vegetarian" (change)="applyFilters()"> Vegetariano</label>
+            <label class="filtro-label"><input type="checkbox" formControlName="vegan" (change)="applyFilters()"> Vegano</label>
+            <label class="filtro-label"><input type="checkbox" formControlName="glutenFree" (change)="applyFilters()"> Sin gluten</label>
+            <button class="btn-limpiar" type="button" (click)="resetFilters()">Limpiar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    @if (contenedorRecetas){
+      
+      <div class="cont-recetas">
+
+        @for (item of displayedRecetas; track $index) {
+        <div>
+          <app-receta-card 
+          [receta]="item"
+          (verDetalles)="navigateToDetails($event)">
+          </app-receta-card>
+        </div>
+        }
+  
+        <button class="similares" (click)="actualizarRecetas()">Ver recetas similares</button>
+  
+  
+      </div>
+    }
+
+    
+  </section>
+    
+  </div>
+  <app-footer></app-footer>
+
+
+
+
+
+
