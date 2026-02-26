@@ -1,0 +1,54 @@
+<div class="page-container">
+  <app-nav-bar-login></app-nav-bar-login>
+
+  <div class="content">
+
+    <div class="recetarios-container">
+
+      <div class="header-section">
+        <h2 class="titulo-general">Mis recetarios</h2>
+        <button [routerLink]="['/agregar-lista']" class="btn-primary">
+          + Crear nuevo recetario
+        </button>
+      </div>
+
+      <div *ngIf="listas.length > 0; else noListas">
+
+        <div class="listas-wrapper">
+          <ul class="lista-de-listas">
+
+            <li *ngFor="let lista of listas" class="item-lista">
+
+              <div class="lista-info">
+                <h3 class="nombre-li">{{ lista.nombre }}</h3>
+              </div>
+
+              <div class="lista-actions">
+                <button class="btn-secondary" (click)="verDetallesLista(lista.id)">
+                  Ver recetas
+                </button>
+
+                <button class="btn-danger" (click)="borrarLista(lista.id)">
+                  Eliminar
+                </button>
+              </div>
+
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+    <ng-template #noListas>
+      <div class="empty-state">
+        <p>No tienes listas personalizadas creadas.</p>
+      </div>
+    </ng-template>
+
+  </div>
+</div>
+
+<app-footer></app-footer>

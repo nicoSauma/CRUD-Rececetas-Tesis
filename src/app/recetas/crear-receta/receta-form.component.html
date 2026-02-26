@@ -1,0 +1,116 @@
+<app-nav-bar-login> </app-nav-bar-login>
+
+<form [formGroup]="formulario" (ngSubmit)="addRecipe2()" class="recipe-form">
+
+  <h1 class="form-title">Crear receta</h1>
+
+  <!-- Información básica -->
+  <div class="form-section">
+    <h3>Información básica</h3>
+
+    <div class="form-group">
+      <label>Título</label>
+      <input formControlName="title" type="text" />
+      <span *ngIf="formulario.get('title')?.invalid && formulario.get('title')?.touched"
+            class="error-text">
+        *Título requerido
+      </span>
+    </div>
+
+    <div class="checkbox-group">
+      <label class="checkbox-card">
+        <input formControlName="vegetarian" type="checkbox" />
+        🥦 Vegetariano
+      </label>
+
+      <label class="checkbox-card">
+        <input formControlName="vegan" type="checkbox" />
+        🌱 Vegano
+      </label>
+
+      <label class="checkbox-card">
+        <input formControlName="glutenFree" type="checkbox" />
+        🌾 Sin gluten
+      </label>
+    </div>
+  </div>
+
+  <!-- Ingredientes -->
+  <div class="form-section">
+    <h3>Ingredientes</h3>
+
+    <div formArrayName="ingredientes" class="ingredientes-container">
+      <div *ngFor="let ingrediente of ingredientes.controls; let i = index"
+           [formGroupName]="i"
+           class="ingrediente-card">
+
+        <input formControlName="name" type="text" placeholder="Nombre" />
+        <input formControlName="amount" type="number" placeholder="Cantidad" />
+        <input formControlName="unit" type="text" placeholder="Unidad" />
+
+        <button type="button" class="delete-btn"
+                (click)="eliminarIngrediente(i)">
+          ✕
+        </button>
+      </div>
+    </div>
+
+    <button type="button"
+            class="secondary-btn"
+            (click)="agregarIngrediente()">
+      + Agregar ingrediente
+    </button>
+  </div>
+
+  <!-- Datos adicionales -->
+  <div class="form-section">
+    <h3>Detalles</h3>
+
+    <div class="grid-2">
+      <div class="form-group">
+        <label>Tiempo (min)</label>
+        <input formControlName="readyInMinutes" type="number" />
+      </div>
+
+      <div class="form-group">
+        <label>Porciones</label>
+        <input formControlName="servings" type="number" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Instrucciones</label>
+      <textarea formControlName="instructions"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Puntuación (0-100)</label>
+      <input formControlName="spoonacularScore" type="number" />
+    </div>
+
+    <div class="form-group">
+      <label>Selecciona una lista</label>
+      <select formControlName="listaId">
+        <option value="0" disabled>Selecciona una lista</option>
+        <option *ngFor="let lista of userComun.listas"
+                [value]="lista.id">
+          {{ lista.nombre }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Botón -->
+  <button type="submit"
+          class="primary-btn"
+          [disabled]="formulario.invalid">
+    Guardar receta
+  </button>
+
+  <div *ngIf="formulario.invalid" class="error-banner">
+    ⚠️ Faltan campos obligatorios
+  </div>
+
+</form>
+
+<app-footer></app-footer>

@@ -1,0 +1,159 @@
+.recipe-form {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(241, 232, 232, 0.35);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Título */
+.form-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #4d3540;
+}
+
+/* Secciones */
+.form-section {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-section h3 {
+  margin: 0;
+  color: #4d3540;
+}
+
+/* Inputs */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input, textarea, select {
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #e3c98d;
+  font-family: 'Montserrat';
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #e09422;
+  box-shadow: 0 0 0 3px rgba(224,148,34,0.2);
+}
+
+/* Checkboxes modernas */
+.checkbox-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.checkbox-card {
+  background: #f4efe4;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Ingredientes */
+.ingredientes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ingrediente-card {
+  background: #f8f5ed;
+  padding: 15px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.delete-btn {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Grid 2 columnas */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Botones */
+.primary-btn {
+  background: linear-gradient(135deg, #e3c98d, #e09422);
+  border: none;
+  padding: 15px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.primary-btn:hover:enabled {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.primary-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  background: #f4efe4;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Error */
+.error-text {
+  color: #e74c3c;
+  font-size: 0.85rem;
+}
+
+.error-banner {
+  background: #fdecea;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  color: #c0392b;
+  font-weight: 600;
+}

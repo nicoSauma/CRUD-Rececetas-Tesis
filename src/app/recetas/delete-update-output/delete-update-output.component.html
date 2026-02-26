@@ -1,0 +1,33 @@
+<div class="recipe-card-admin">
+
+  <div class="card-image">
+    <img [src]="receta.image" [alt]="receta.title" />
+  </div>
+
+  <div class="card-content">
+
+    <div class="card-info">
+      <h3 class="card-title">
+        {{ receta.title }}
+      </h3>
+
+      <div class="card-meta">
+        <div class="meta-item">
+          ⏱ {{ receta.readyInMinutes }} min
+        </div>
+
+        <div class="meta-item rating">
+          ⭐ {{ receta.spoonacularScore | number:'1.0-1' }}
+        </div>
+      </div>
+    </div>
+
+    <div class="card-actions">
+      <button class="btn delete" (click)="onDelete()">Eliminar</button>
+      <button class="btn update" (click)="onUpdate()">Modificar</button>
+      <button class="btn details" (click)="onDetalles()">Ver receta</button>
+    </div>
+
+  </div>
+
+</div>

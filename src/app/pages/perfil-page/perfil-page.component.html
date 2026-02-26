@@ -1,0 +1,53 @@
+<app-nav-bar-login></app-nav-bar-login>
+
+<section>
+
+    <div class="carta-perfil">
+
+        <div class="profile-image-container">
+            <img 
+                [src]="imagenPerfil" 
+                alt="Foto de perfil"
+                class="profile-img"
+            >
+            <div class="profile-overlay">
+                <button class="overlay-btn edit-btn" (click)="fileInput.click()" title="Editar foto">
+                    ✏️
+                </button>
+                <button class="overlay-btn delete-btn" (click)="resetProfileImage()" title="Eliminar foto">
+                    🗑️
+                </button>
+            </div>
+        </div>
+        <input 
+            #fileInput 
+            type="file" 
+            accept="image/*" 
+            (change)="onFileSelected($event)"
+            style="display: none;"
+        >
+
+        <div class="info-general">
+
+            <div class="info-personal">
+                <p class="info-txt">Nombre:</p>
+                <p class="info-llamada">{{userComun.nombreUsuario}}</p>
+            </div>
+
+            <div class="info-personal">
+                <p class="info-txt">Email:</p>
+                <p class="info-llamada">{{userComun.email}}</p>
+            </div>
+
+            <div class="info-personal botones-container">
+                <button class="btn" [routerLink]="['/mis-listas']">Mis recetarios</button>
+                <button class="btn" [routerLink]="['/edit-perfil', userACT.id]">Editar perfil</button>
+                <button class="btn btn-delete" (click)="deleteUser()">Eliminar perfil</button>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<app-footer></app-footer>

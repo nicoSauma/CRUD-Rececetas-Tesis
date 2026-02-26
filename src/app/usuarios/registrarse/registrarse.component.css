@@ -1,0 +1,115 @@
+.register-container {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f9f6ef, #f4efe4);
+  padding: 40px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  padding: 45px;
+  border-radius: 25px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.register-header {
+  text-align: center;
+}
+
+.register-header h1 {
+  margin: 0;
+  font-size: 34px;
+  color: #4d3540;
+}
+
+.register-header p {
+  margin-top: 8px;
+  color: #7a6f6f;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-weight: 600;
+  color: #4d3540;
+}
+
+input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #e3c98d;
+  transition: 0.3s;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #e09422;
+  box-shadow: 0 0 0 3px rgba(224,148,34,0.2);
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+}
+
+.reveal-btn {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.register-btn {
+  margin-top: 15px;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #e3c98d, #e09422);
+  transition: 0.3s;
+}
+
+.register-btn:hover:enabled {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.register-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error-text {
+  font-size: 0.85rem;
+  color: #e74c3c;
+}
+
+.error-text.small {
+  font-size: 0.75rem;
+}

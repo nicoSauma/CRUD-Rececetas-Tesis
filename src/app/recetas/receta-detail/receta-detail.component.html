@@ -1,0 +1,77 @@
+<app-nav-bar-login></app-nav-bar-login>
+
+<section class="detalle-receta-section">
+
+  <div *ngIf="recipe" class="recipe-card">
+
+    <h1 class="recipe-title">{{ recipe.title }}</h1>
+
+    <div class="image-wrapper">
+      <img 
+        [src]="recipe.image" 
+        alt="Imagen de {{ recipe.title }}" 
+        class="recipe-image" />
+    </div>
+
+    <!-- Info rápida -->
+    <div class="recipe-stats">
+      <div class="stat">
+        ⏱ {{ recipe.readyInMinutes }} min
+      </div>
+      <div class="stat">
+        ⭐ {{ recipe.spoonacularScore.toFixed(0) }} / 100
+      </div>
+    </div>
+
+    <!-- Ingredientes -->
+    <div class="section-card">
+      <h3>Ingredientes</h3>
+      <ul class="ingredient-list">
+        <li *ngFor="let ingredient of recipe.extendedIngredients">
+          {{ ingredient.amount.toFixed(1) }}
+          {{ ingredient.unit }}
+          {{ ingredient.name }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Instrucciones -->
+    <div class="section-card">
+      <h3>Instrucciones</h3>
+      <ul class="instructions-list">
+        <li *ngFor="let step of getInstructions()">
+          {{ step }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Agregar a lista -->
+    <button 
+      class="primary-btn" 
+      (click)="activarAgregarLista = true">
+      + Agregar a una lista
+    </button>
+
+    @if (activarAgregarLista) {
+      <div class="add-list-card">
+        <form [formGroup]="formulario" (ngSubmit)="addRecipe()">
+          <div class="select-container">
+            <select id="listaId" formControlName="listaId">
+              <option *ngFor="let lista of userComun.listas" [value]="lista.id">
+                {{ lista.nombre }}
+              </option>
+            </select>
+
+            <button type="submit" class="secondary-btn">
+              Agregar
+            </button>
+          </div>
+        </form>
+      </div>
+    }
+
+  </div>
+
+</section>
+
+<app-footer></app-footer>

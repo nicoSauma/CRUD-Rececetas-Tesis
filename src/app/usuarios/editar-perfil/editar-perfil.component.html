@@ -1,0 +1,70 @@
+<div class="contenedor-principal">
+    <app-nav-bar-login></app-nav-bar-login>
+  
+    <section>
+  <div class="edit-container">
+
+    <h2 class="titulo">Editar perfil</h2>
+
+    <div class="carta">
+      <form class="formulario" [formGroup]="formulario">
+
+        <div class="info-edit">
+          <label>Nuevo nombre</label>
+          <input type="text" formControlName="nombre" />
+
+          @if (formulario.controls['nombre'].touched) {
+            @if (formulario.controls['nombre'].getError('required')) {
+              <span class="requerido">El nombre no puede estar vacío</span>
+            }
+            @if (formulario.controls['nombre'].getError('minlength')) {
+              <span class="requerido">El nombre es muy corto</span>
+            }
+          }
+        </div>
+
+        <div class="info-edit password-group">
+
+  <label>Nueva contraseña</label>
+
+  <div class="input-wrapper">
+    <input 
+      [type]="mostrarPassword ? 'text' : 'password'"
+      formControlName="contrasena"
+    />
+
+    <button 
+      type="button"
+      class="toggle-password"
+      (click)="togglePassword()"
+      aria-label="Mostrar contraseña">
+      {{ mostrarPassword ? '🙈' : '👁' }}
+    </button>
+  </div>
+
+  @if (formulario.controls['contrasena'].touched) {
+    @if (formulario.controls['contrasena'].getError('required')) {
+      <span class="requerido">La contraseña no puede estar vacía</span>
+    }
+    @if (formulario.controls['contrasena'].getError('minlength')) {
+      <span class="requerido">La contraseña es muy corta</span>
+    }
+  }
+
+</div>
+
+        <button class="btn-primary"
+                type="button"
+                (click)="editPerfil()"
+                [disabled]="formulario.invalid">
+          Guardar cambios
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+  
+    <app-footer></app-footer>
+  </div>

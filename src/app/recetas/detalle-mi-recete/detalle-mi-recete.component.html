@@ -1,0 +1,71 @@
+<app-nav-bar-login></app-nav-bar-login>
+
+<section class="detalle-receta-section">
+
+  <div *ngIf="receta" class="recipe-card">
+
+    <h1 class="recipe-title">{{ receta.title }}</h1>
+
+    <div class="image-wrapper">
+      <img 
+        [src]="receta.image" 
+        alt="Imagen de {{ receta.title }}" 
+        class="recipe-image" />
+    </div>
+
+    <!-- Stats -->
+    <div class="recipe-stats">
+      <div class="stat">
+        ⏱ {{ receta.readyInMinutes }} min
+      </div>
+      <div class="stat">
+        ⭐ {{ receta.spoonacularScore.toFixed(0) }} / 100
+      </div>
+    </div>
+
+    <!-- Ingredientes -->
+    <div class="section-card">
+      <h3>Ingredientes</h3>
+      <ul class="ingredient-list">
+        <li *ngFor="let ingrediente of receta.ingredientes">
+          {{ ingrediente.amount.toFixed(1) }}
+          {{ ingrediente.unit }}
+          {{ ingrediente.name }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Instrucciones -->
+    <div class="section-card">
+      <h3>Instrucciones</h3>
+      <ul class="instructions-list">
+        <li *ngFor="let step of getInstructions()">
+          {{ step }}
+        </li>
+      </ul>
+    </div>
+
+    <!-- Libreta -->
+    <div class="section-card notes-card">
+      <h3>📝 Anotaciones</h3>
+
+      <form [formGroup]="formulario" (ngSubmit)="guardarAnotacion()">
+        <textarea 
+          formControlName="anotacion"
+          placeholder="Escribe aquí tus notas sobre esta receta...">
+        </textarea>
+
+        <button 
+          type="submit" 
+          class="primary-btn"
+          [disabled]="formulario.invalid">
+          Guardar anotación
+        </button>
+      </form>
+    </div>
+
+  </div>
+
+</section>
+
+<app-footer></app-footer>

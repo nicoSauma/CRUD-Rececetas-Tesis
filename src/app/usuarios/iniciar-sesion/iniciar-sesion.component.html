@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+
+<section class="login-container">
+
+  <div class="login-card">
+
+    <div class="login-header">
+      <h1>Bon APPetit</h1>
+      <p>Bienvenido nuevamente 👋</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onLogin()" class="login-form">
+
+      <div class="form-group">
+        <label>Nombre de Usuario</label>
+        <input type="text"
+               autocomplete="username"
+               formControlName="username">
+        <span *ngIf="form.controls['username'].invalid && form.controls['username'].touched"
+              class="error-text">
+          Campo requerido
+        </span>
+      </div>
+
+      <div class="form-group password-group">
+        <label>Contraseña</label>
+        <div class="password-wrapper">
+          <input #password
+                 type="password"
+                 formControlName="password">
+          <button type="button"
+                  class="reveal-btn"
+                  (click)="onRevealPassword(password)">
+            👁
+          </button>
+        </div>
+
+        <span *ngIf="form.controls['password'].invalid && form.controls['password'].touched"
+              class="error-text">
+          Campo requerido
+        </span>
+      </div>
+
+      <button type="submit"
+              class="login-btn"
+              [disabled]="form.invalid">
+        Iniciar sesión
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<app-footer> </app-footer>
+
+
+
+

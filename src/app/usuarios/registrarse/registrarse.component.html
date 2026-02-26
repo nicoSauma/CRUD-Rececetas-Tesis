@@ -1,0 +1,97 @@
+<app-navbar></app-navbar>
+
+<section class="register-container">
+
+  <div class="register-card">
+
+    <div class="register-header">
+      <h1>Crear cuenta</h1>
+      <p>Unite y empezá a organizar tus recetas 🍽️</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="register-form">
+
+      <!-- Email -->
+      <div class="form-group">
+        <label>Correo electrónico</label>
+        <input type="text"
+               autocomplete="email"
+               formControlName="email">
+
+        @if (form.controls['email'].touched && form.controls['email'].getError('required')) {
+  <span class="error-text">
+    El email no puede estar vacío
+  </span>
+}
+
+@if (form.controls['email'].touched && form.controls['email'].getError('email')) {
+  <span class="error-text">
+    Formato de email inválido
+  </span>
+}
+      </div>
+
+      <!-- Username -->
+      <div class="form-group">
+        <label>Nombre de Usuario</label>
+        <input type="text"
+               autocomplete="username"
+               formControlName="username">
+
+       @if (form.controls['username'].touched && form.controls['username'].getError('required')) {
+  <span class="error-text">
+    El usuario no puede estar vacío
+  </span>
+}
+
+@if (form.controls['username'].touched && form.controls['username'].getError('minlength')) {
+  <span class="error-text">
+    Mínimo 3 caracteres
+  </span>
+}
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label>Contraseña</label>
+
+        <div class="password-wrapper">
+          <input #password
+                 type="password"
+                 formControlName="password">
+
+          <button type="button"
+                  class="reveal-btn"
+                  (click)="onRevealPassword(password)">
+            👁
+          </button>
+        </div>
+
+        @if (form.controls['password'].touched && form.controls['password'].getError('required')) {
+  <span class="error-text">
+    La contraseña es obligatoria
+  </span>
+}
+
+@if (form.controls['password'].touched && form.controls['password'].getError('pattern')) {
+  <span class="error-text small">
+    8-16 caracteres, 1 mayúscula y 1 número
+  </span>
+}
+
+      </div>
+
+      <button type="submit"
+              class="register-btn"
+              [disabled]="form.invalid">
+        Crear cuenta
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+<app-footer> </app-footer>
+

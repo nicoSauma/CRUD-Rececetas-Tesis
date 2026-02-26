@@ -1,0 +1,33 @@
+<app-nav-bar-login></app-nav-bar-login>
+
+
+
+    <app-menu-inicio></app-menu-inicio>
+
+
+
+<div class="contenedor-section">
+    <section>
+        <div class="cont-p">
+            <h1>¿Sin ideas para cocinar hoy?</h1>
+              <p>
+        Te mostramos cinco recetas al azar para que te inspires,
+        pruebes algo nuevo y sorprendas en la cocina.
+      </p>
+        </div>
+
+        <button (click)="obtenerRecetasRandom()">Ver recetas</button>
+
+    </section>
+
+    <div class="cont-recetas">
+            @for (item of listaRecetas; track $index) {
+
+                <app-receta-card [receta]="item" (verDetalles)="navigateToDetails($event)"> </app-receta-card>
+
+            }
+        </div>
+</div>
+
+<app-footer> </app-footer>
+

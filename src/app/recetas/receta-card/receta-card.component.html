@@ -1,0 +1,33 @@
+<section class="card-wrapper">
+  <div class="recipe-card">
+
+    <div class="card-image">
+      <img [src]="receta.image" [alt]="receta.title" />
+    </div>
+
+    <div class="card-content">
+      
+      <div class="card-info">
+        <h3 class="card-title">{{ receta.title }}</h3>
+
+        <div class="card-meta">
+          <div class="meta-item">
+            ⏱ {{ receta.readyInMinutes }} min
+          </div>
+
+          <div class="meta-item rating">
+            ⭐ {{ receta.spoonacularScore | number:'1.0-1' }}
+          </div>
+        </div>
+      </div>
+
+      <button class="card-button" (click)="onVerDetalles()">
+        Ver información detallada
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+
