@@ -2,6 +2,7 @@
     <app-nav-bar-login></app-nav-bar-login>
   
     <section>
+<<<<<<< HEAD
   <div class="edit-container">
 
     <h2 class="titulo">Editar perfil</h2>
@@ -65,6 +66,47 @@
 
   </div>
 </section>
+=======
+      <h3 class="titulo">Editar perfil</h3>
+  
+      <div class="carta">
+
+        <form class="formulario" [formGroup]="formulario">
+            
+          <div class="info-edit">
+            <label for="nombre">Nuevo nombre</label>
+            <input type="text" formControlName="nombre" />
+
+            @if (formulario.controls['nombre'].touched) {
+              @if (formulario.controls['nombre'].getError('required')) {
+                  <span class="requerido">El nombre de usuario no puede permanecer vacío</span>
+              }
+              @if (formulario.controls['nombre'].getError('minlength')) {
+                  <span class="requerido">El nombre de usuario es muy corto</span>
+              }
+          }
+          </div>
+  
+          <div class="info-edit">
+            <label for="contrasena">Nueva contraseña</label>
+            <input type="text" formControlName="contrasena" />
+
+            @if (formulario.controls['contrasena'].touched) {
+                    
+              @if (formulario.controls['contrasena'].getError('required')) {
+                  <span class="requerido">La contraseña no puede permanecer vacía</span>
+              }
+              @if (formulario.controls['contrasena'].getError('minlength')) {
+                  <span class="requerido">La contraseña es muy corta</span>
+              }
+          }
+          </div>
+  
+          <button class="btn" (click)="editPerfil()" [disabled]="formulario.invalid">Guardar cambios</button>
+        </form>
+      </div>
+    </section>
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
   
     <app-footer></app-footer>
   </div>

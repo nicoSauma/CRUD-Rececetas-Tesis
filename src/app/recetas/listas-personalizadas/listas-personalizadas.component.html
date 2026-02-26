@@ -1,4 +1,5 @@
 <div class="page-container">
+<<<<<<< HEAD
   <app-nav-bar-login></app-nav-bar-login>
 
   <div class="content">
@@ -32,6 +33,29 @@
   </div>
 
   <app-footer></app-footer>
+=======
+<app-nav-bar-login></app-nav-bar-login>
+<h2>Crea tus propias listas personalizadas</h2>
+<!-- Crear una nueva lista -->
+<form [formGroup]="formulario" (ngSubmit)="postLista()" class="formulario">
+  <div class="input-container">
+    <label for="nombre" class="form-label">Nombre del recetario:</label>
+    <input
+      type="text"
+      placeholder="Introduce el nombre del nuevo recetario"
+      formControlName="nombre"
+      class="form-input" />
+  </div>
+
+
+  <div *ngIf="formulario.controls['nombre'].getError('required') && formulario.controls['nombre'].touched" class="error-message">
+    <p>Campo requerido</p>
+  </div>
+
+  <button type="submit" class="submit-button" [disabled]="formulario.invalid">Crear lista</button>
+</form>
+<app-footer></app-footer>
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 </div>
 
 

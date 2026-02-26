@@ -1,6 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+<<<<<<< HEAD
 import { NavBarLoginComponent } from "../../navegadores/nav-bar-logeado/nav-bar-login.component";
+=======
+import { NavBarLoginComponent } from "../../navegadores/nav-bar-login/nav-bar-login.component";
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsuariosService } from '../../service/usuarios.service';
@@ -115,10 +119,13 @@ export class EditarPerfilComponent implements OnInit {
     }); 
   }
 
+<<<<<<< HEAD
   mostrarPassword: boolean = false;
 
 togglePassword() {
   this.mostrarPassword = !this.mostrarPassword;
 }
 
+=======
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 }

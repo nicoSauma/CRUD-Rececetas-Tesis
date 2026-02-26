@@ -3,7 +3,11 @@ import { ExtendedIngredient, Ingredientes, Receta, RecipeInfo } from '../../inte
 import { RecetasService } from '../../service/recetas.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+<<<<<<< HEAD
 import { NavBarLoginComponent } from "../../navegadores/nav-bar-logeado/nav-bar-login.component";
+=======
+import { NavBarLoginComponent } from "../../navegadores/nav-bar-login/nav-bar-login.component";
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { UsuariosService } from '../../service/usuarios.service';
 import { UserActivo } from '../../interfaces/user-activo';
@@ -107,11 +111,19 @@ export class RecetaDetailComponent implements OnInit{
     if (listaSeleccionada) {
       listaSeleccionada.recetas.push(receta);
 
+<<<<<<< HEAD
 
       this.serviciouser.editUser(this.userComun).subscribe({
         next: () => {
           this.alertRecetaAdd();
           this.router.navigate(['/home']); 
+=======
+      // Opcional: Guarda los cambios en el backend
+      this.serviciouser.editUser(this.userComun).subscribe({
+        next: () => {
+          this.alertRecetaAdd();
+          this.router.navigate(['/home']); // Redirige al usuario si es necesario
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
         },
         error: (err:Error) => {
           console.error("Error al guardar la receta:", err);

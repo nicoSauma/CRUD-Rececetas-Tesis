@@ -2,7 +2,11 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { EnvironmentInjector, inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { environment } from '../../environments/environment.development';
+<<<<<<< HEAD
 import { Receta, RecipeInfo } from '../interfaces/recetas';
+=======
+import { Receta, Receta2, RecipeInfo } from '../interfaces/recetas';
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 import { RecetasRandom } from '../interfaces/recetasRandom';
 
 @Injectable({
@@ -112,5 +116,9 @@ updateReceta(idReceta: number, receta: Receta): Observable<Receta> {
 deleteReceta(idReceta: number): Observable<Receta> {
     return this.http.delete<Receta>(`${this.baseUrl}/${idReceta}`);
 }
+<<<<<<< HEAD
   
+=======
+  //form
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 }

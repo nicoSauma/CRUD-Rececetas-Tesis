@@ -7,7 +7,11 @@ import { RecetaCardComponent } from '../receta-card/receta-card.component';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { FooterComponent } from '../../shared/footer/footer.component';
+<<<<<<< HEAD
 import { NavBarLoginComponent } from '../../navegadores/nav-bar-logeado/nav-bar-login.component';
+=======
+import { NavBarLoginComponent } from '../../navegadores/nav-bar-login/nav-bar-login.component';
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 
 @Component({
   selector: 'app-receta-list',

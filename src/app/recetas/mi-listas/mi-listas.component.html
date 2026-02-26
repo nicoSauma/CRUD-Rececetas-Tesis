@@ -3,6 +3,7 @@
 
   <div class="content">
 
+<<<<<<< HEAD
     <div class="recetarios-container">
 
       <div class="header-section">
@@ -37,10 +38,42 @@
 
           </ul>
         </div>
+=======
+
+
+   <div class="cont-todo">
+
+
+    <h3 class="titulo-general">Mis recetarios</h3>
+    <div class="contenedor">
+      <button [routerLink]="['/agregar-lista']" class="btns">Crear nuevo recetario</button>
+    </div>
+
+
+    <div *ngIf="listas.length > 0; else noListas">
+
+      <div class="contenedor-info">
+
+        <ul class="lista-de-listas">
+
+          <li *ngFor="let lista of listas" class="item-lista">
+            <p class="nombre-li">{{ lista.nombre }}</p>
+
+            <button class="btns" (click)="verDetallesLista(lista.id)">Ver recetas</button>
+
+            <!-- <button  class="btns" [routerLink]="['/agregar-receta']">Crear recetas</button> -->
+            
+            <button class="btns" (click)="borrarLista(lista.id)">Eliminar recetario</button>
+
+
+          </li>
+        </ul>
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 
       </div>
 
     </div>
+<<<<<<< HEAD
 
     <ng-template #noListas>
       <div class="empty-state">
@@ -52,3 +85,16 @@
 </div>
 
 <app-footer></app-footer>
+=======
+  </div>
+
+    <ng-template #noListas>
+      <p class="sinlistas">No tienes listas personalizadas creadas.</p>
+    </ng-template>
+  </div>
+
+
+</div>
+<app-footer></app-footer>
+
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010

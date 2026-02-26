@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .page-container {
   display: flex;
   flex-direction: column;
@@ -11,6 +12,8 @@
   align-items: center;
 }
 
+=======
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 footer {
   margin-top: auto;
   width: 100%;
@@ -20,6 +23,7 @@ footer {
   color: #555;
 }
 
+<<<<<<< HEAD
 section {
   flex: 1;
   display: flex;
@@ -27,18 +31,32 @@ section {
   align-items: center;
 }
 
+=======
+section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100vh;
+min-height: 100vh;
+}
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 .titulo{
   font-size: 45px;
   margin-top: 10px;
   font-weight: 600;
   font-family: 'Monserrat', sans-serif;
+<<<<<<< HEAD
   color: #000000;
+=======
+  color: #7e654e;
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
   margin-bottom: 10px;
 }
 .info-receta{
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< HEAD
   margin-top: 5px;
   border-radius: 5px;
   padding: 15px;
@@ -50,6 +68,20 @@ section {
   font-family: 'Montserrat';
   margin-top: 10px;
    color: #2c2c2c;
+=======
+  background-color: rgb(241, 232, 232, 0.5);
+  margin-top: 5px;
+  border-radius: 5px;
+  padding: 15px;
+  color:  #7e654e;
+}
+.nombre-lista{
+  font-size: 30px;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  margin-top: 10px;
+  color:  #7e654e;
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
   margin: 0;
 }
 
@@ -61,6 +93,7 @@ section {
   flex-wrap: wrap;
 }
 
+<<<<<<< HEAD
 
 .btn-ordenar {
   padding: 10px 18px;
@@ -76,13 +109,36 @@ section {
 .btn-ordenar:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+=======
+.btn-ordenar {
+  background-color: #e09422;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Montserrat';
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-ordenar:hover {
+  background-color: #d68818;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 }
 
 .btn-ordenar:active {
   transform: translateY(0);
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 .botones{
   display: flex;
   flex-direction: column;

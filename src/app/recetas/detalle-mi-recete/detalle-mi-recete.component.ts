@@ -5,7 +5,11 @@ import { UsuariosService } from '../../service/usuarios.service';
 import { UserActivo } from '../../interfaces/user-activo';
 import { User } from '../../interfaces/user';
 import { FooterComponent } from '../../shared/footer/footer.component';
+<<<<<<< HEAD
 import { NavBarLoginComponent } from '../../navegadores/nav-bar-logeado/nav-bar-login.component';
+=======
+import { NavBarLoginComponent } from '../../navegadores/nav-bar-login/nav-bar-login.component';
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import Swal from 'sweetalert2'

@@ -1,5 +1,6 @@
 <app-nav-bar-login></app-nav-bar-login>
 
+<<<<<<< HEAD
 <section class="detalle-receta-section">
 
   <div *ngIf="receta" class="recipe-card">
@@ -69,3 +70,77 @@
 </section>
 
 <app-footer></app-footer>
+=======
+<section>
+  <div *ngIf="receta" class="recipe-container">
+
+    <h2 class="recipe-title">{{ receta.title }}</h2>
+
+    <div class="cont-img">
+      <img [src]="receta.image" alt="Imagen de {{ receta.title }}" class="recipe-image" />
+    </div>
+
+    <!-- Información General -->
+    <div class="recipe-info">
+      <p><strong>Tiempo de preparación:</strong> {{ receta.readyInMinutes }} minutos</p>
+      <p><strong>Calificación:</strong> {{ receta.spoonacularScore.toFixed(2) }} / 100</p>
+
+    </div>
+
+    <div class="cont-ingredientes">
+
+      <h3>Ingredientes</h3>
+      <div class="info-ingredientes">
+        <ul class="ingredient-list">
+          <li *ngFor="let ingrediente of receta.ingredientes">
+            {{ ingrediente.amount.toFixed(1) }}
+            {{ingrediente.name}}
+             {{ingrediente.unit}}
+          </li>
+        </ul>
+      </div>
+     </div>
+
+    <div class="cont-instrucciones">
+      <h3>Instrucciones</h3>
+      <ul>
+        <li *ngFor="let step of getInstructions()">
+          {{ step }}</li>
+      </ul>
+    </div>
+
+
+
+    <div class="libreta">
+      <form [formGroup]="formulario" (ngSubmit)="guardarAnotacion()">
+        <div class="anotacionesTitulo">Anotaciones!</div>
+        <div class="escribir">
+          <textarea name="formulario" id="anotacion" formControlName="anotacion">Escribe aqui...</textarea>
+        </div>
+        <button type="submit" [disabled]="formulario.invalid">Guardar</button>
+      </form>
+  </div>
+
+
+
+
+  </div> <!-- Cierra el div que está abierto antes del *ngIf -->
+</section> <!-- Cierra la sección aquí -->
+
+<app-footer></app-footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010

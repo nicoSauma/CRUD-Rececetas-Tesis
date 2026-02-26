@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
 
+<<<<<<< HEAD
 <section class="register-container">
 
   <div class="register-card">
@@ -94,4 +95,160 @@
 </section>
 
 <app-footer> </app-footer>
+=======
+<section>
+    <h4 id="titulo-registro">Registro Usuario</h4>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        
+           
+            <section class="contenedor-datos">
+
+                <div class="div-input">
+                    <label for="email" class="ingresar-datos">Correo electrónico</label>
+                <input type="text" id="email" autocomplete="email" formControlName="email">
+                </div>
+                
+                @if (form.controls['email'].touched) {
+                    @if (form.controls['email'].getError('required')) {
+                        <span class="requerido">El email no puede permanecer vacío</span>
+                    }
+                    @if (form.controls['email'].getError('email')) {
+                        <span class="requerido">El email no es un correo válido</span>
+                    }
+                }
+            </section>
+
+            <section class="contenedor-datos">
+
+                <div class="div-input">
+
+                    <label class="ingresar-datos" for="username">Nombre de Usuario</label>
+                    <input type="text" id="username" autocomplete="username" formControlName="username">
+
+                </div>
+                
+                @if (form.controls['username'].touched) {
+                    @if (form.controls['username'].getError('required')) {
+                        <span class="requerido">El nombre de usuario no puede permanecer vacío</span>
+                    }
+                    @if (form.controls['username'].getError('minlength')) {
+                        <span class="requerido">El nombre de usuario es muy corto</span>
+                    }
+                }
+            </section>
+
+            <section class="contenedor-datos">
+
+                <div class="div-input">
+
+                    <label for="password" class="ingresar-datos">Contraseña</label>
+                <input #password type="password" id="password" formControlName="password">
+                <button class="ojito" type="button" (click)="onRevealPassword(password)">Ojito</button>
+
+                </div>
+              
+                @if (form.controls['password'].touched) {
+                    
+                    @if (form.controls['password'].getError('required')) {
+                        <span class="requerido">La contraseña no puede permanecer vacía</span>
+                    }
+                    @if (form.controls['password'].getError('pattern')) {
+                        <span class="requerido">
+                            - Entre 8 y 16 caracteres<br>
+                            - Una Mayúscula<br>
+                            - Un número
+                        </span>
+                    }
+                }
+            </section>
+
+            <button class="btn" type="submit" [disabled]="form.invalid">Enviar</button>
+        
+    </form>
+
+    <!--
+    
+    <form [formGroup]="formulario" (ngSubmit)="addUsuario()">
+        
+        
+            <section class="contenedor-datos">
+                
+                <div class="div-input">
+                    <label for="username" class="ingresar-datos">Nombre usuario</label>
+                    <input type="text" id="username" formControlName="nombreUsuario">
+                </div>
+                @if (formulario.controls['nombreUsuario'].touched) {
+                    @if (formulario.controls['nombreUsuario'].getError('required')) {
+                        <span class="requerido">*Campo requerido</span>
+                      }
+                }
+                
+            </section>
+           
+            <section class="contenedor-datos">
+
+                <div class="div-input">
+                    <label for="email" class="ingresar-datos">Email</label>
+                    <input type="email" id="email" formControlName="email">
+                    @if (formulario.controls['email'].touched) {
+                        @if (formulario.controls['email'].getError('required')) {
+                            <span class="requerido">*Campo requerido</span>
+                        }
+                        @if (formulario.controls['email'].getError('email')) {
+                            <span class="requerido">*El email no es un correo valido</span>
+                        }
+                    }
+                    
+                </div>
+
+            </section>
+           
+
+            <section class="contenedor-datos">
+
+                <div class="div-input">
+                    <label for="contraseña" class="ingresar-datos">Contraseña</label>
+                    <input type="password" formControlName="contrasena">
+                </div>
+                @if (formulario.controls['contrasena'].touched) {
+                    @if (formulario.controls['contrasena'].getError('required')) {
+                        <span class="requerido">*Campo requerido</span>
+                    }
+                }
+               
+            </section>
+            
+            <button class="btn">Registrar usuario</button>
+       
+    </form>
+    
+    -->
+    
+
+</section>
+
+<footer>
+    <div class="info1">
+        <p id="titulo-redes">Redes</p>
+        <ul>
+            
+            <li>
+                <a href="" target="_blank">GitHub</a>
+            </li>
+            <li>
+                <a href="" target="_blank">Instagram</a>
+            </li>
+            <li>
+                <a href="" target="_blank">Facebook</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="info2">
+        <h4 class="derechos">Todos los derechos reservados</h4>
+    </div>
+   
+</footer>
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 

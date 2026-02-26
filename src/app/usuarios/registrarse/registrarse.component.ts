@@ -8,13 +8,20 @@ import { ListasPersonalizadasComponent } from '../../recetas/listas-personalizad
 import { ListaRecetasPersonalizadas } from '../../interfaces/recetas';
 import { ListasPersonalizadasService } from '../../service/listas-personalizadas.service';
 import Swal from 'sweetalert2'
+<<<<<<< HEAD
 import { FooterComponent } from "../../shared/footer/footer.component";
+=======
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 
 
 @Component({
   selector: 'app-registrarse',
   standalone: true,
+<<<<<<< HEAD
   imports: [ReactiveFormsModule, NavbarComponent, FooterComponent],
+=======
+  imports: [ReactiveFormsModule, NavbarComponent],
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
   templateUrl: './registrarse.component.html',
   styleUrl: './registrarse.component.css'
 })

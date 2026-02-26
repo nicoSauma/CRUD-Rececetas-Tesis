@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+<<<<<<< HEAD
 .content {
   flex: 1;
   display: flex;
@@ -99,11 +104,100 @@
 footer {
   width: 100%;
   padding: 12px;
+=======
+.formulario {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px; /* Cambiado de 600px a 400px */
+  margin: 20px auto; /* Ajusta el margen superior e inferior */
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+h2{
+  font-family: 'Montserrat', sans-serif;
+  color: #555;
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+/* Contenedor de la entrada de texto */
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+  min-height: 100%;
+}
+
+/* Estilo para la etiqueta del input */
+.form-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Estilo para el input */
+.form-input {
+  padding: 10px;
+  border: 2px solid #f7cf79;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #e3c98d;
+}
+
+/* Estilo para el botón de submit */
+.submit-button {
+  padding: 12px 20px;
+  background-color: #d6cda1;
+  border: none;
+  border-radius: 25px;
+  width: 200px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+.submit-button:hover {
+  background-color: #e2a7318b;
+}
+
+/* Estilo para el mensaje de error */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+footer {
+  margin-top: auto; /* Empuja el footer hacia abajo */
+  width: 100%;
+  padding: 10px;
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
   text-align: center;
   background-color: #f7cf79;
   color: #555;
 }
 
+<<<<<<< HEAD
 /* Animación */
 @keyframes fadeIn {
   from {
@@ -115,3 +209,5 @@ footer {
     transform: translateY(0);
   }
 }
+=======
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010

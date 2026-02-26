@@ -1,0 +1,25 @@
+
+<nav class="navegacion">
+
+  <div class="logo-container">
+    <button mat-button class="menu-option" [routerLink]="['/home']">
+      <img src="/img/imagenLogo.jpeg" alt="Logo" class="logo-image">
+    </button>
+  </div>
+
+  <ul class="menu">
+
+    <li>
+      <button class="btn" (click)="irperfil()">Perfil</button>
+    </li>
+
+    <li>
+      <button (click)="obtenerUserActivo()" class="btn">Cerrar sesión</button>
+    </li>
+
+  </ul>
+
+</nav>
+
+
+

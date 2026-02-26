@@ -1,176 +1,8 @@
-<<<<<<< HEAD
-<app-nav-bar-login> </app-nav-bar-login>
-
-<form class="recipe-form"
-      [formGroup]="formulario"
-      (ngSubmit)="updateRecipe()">
-
-  <h1 class="form-title">Modificar Receta</h1>
-
-  <!-- INFORMACIÓN BÁSICA -->
-  <div class="form-section">
-
-    <div class="form-group">
-      <label>Título</label>
-      <input formControlName="title" type="text" />
-      @if (formulario.get('title')?.invalid && formulario.get('title')?.touched) {
-        <span class="error-text">*Título requerido</span>
-      }
-    </div>
-
-    <div class="checkbox-group">
-      <label class="checkbox-card">
-        <input type="checkbox" formControlName="vegetarian">
-        Vegetariano
-      </label>
-
-      <label class="checkbox-card">
-        <input type="checkbox" formControlName="vegan">
-        Vegano
-      </label>
-
-      <label class="checkbox-card">
-        <input type="checkbox" formControlName="glutenFree">
-        Sin gluten
-      </label>
-    </div>
-
-  </div>
-
-  <!-- INGREDIENTES -->
-  <div class="form-section">
-    <h3>Ingredientes</h3>
-
-    <div class="ingredientes-container"
-         formArrayName="ingredientes">
-
-      @for (ingrediente of ingredientes.controls; track $index; let i = $index) {
-        <div class="ingrediente-card"
-             [formGroupName]="i">
-
-          <input formControlName="name" type="text" placeholder="Nombre">
-
-          <input formControlName="amount" type="number" placeholder="Cantidad">
-
-          <input formControlName="unit" type="text" placeholder="Unidad">
-
-          <button type="button"
-                  class="delete-btn"
-                  (click)="eliminarIngrediente(i)">
-            ✕
-          </button>
-
-        </div>
-      }
-
-    </div>
-
-    <button type="button"
-            class="secondary-btn"
-            (click)="agregarIngrediente()">
-      + Agregar ingrediente
-    </button>
-
-  </div>
-
-  <!-- DETALLES -->
-  <div class="form-section grid-2">
-
-    <div class="form-group">
-      <label>Tiempo (minutos)</label>
-      <input formControlName="readyInMinutes" type="number">
-      @if (formulario.get('readyInMinutes')?.invalid && formulario.get('readyInMinutes')?.touched) {
-        <span class="error-text">Mínimo 1 minuto</span>
-      }
-    </div>
-
-    <div class="form-group">
-      <label>Porciones</label>
-      <input formControlName="servings" type="number">
-      @if (formulario.get('servings')?.invalid && formulario.get('servings')?.touched) {
-        <span class="error-text">Mínimo 1</span>
-      }
-    </div>
-
-    <div class="form-group">
-      <label>Puntuación (0-100)</label>
-      <input formControlName="spoonacularScore" type="number">
-      @if (formulario.get('spoonacularScore')?.invalid && formulario.get('spoonacularScore')?.touched) {
-        <span class="error-text">Valor entre 0 y 100</span>
-      }
-    </div>
-
-    <div class="form-group">
-      <label>Lista</label>
-      <select formControlName="listaId">
-        <option value="0" disabled>Selecciona una lista</option>
-        @for (lista of userComun.listas; track lista.id) {
-          <option [value]="lista.id">{{ lista.nombre }}</option>
-        }
-      </select>
-    </div>
-
-  </div>
-
-  <!-- INSTRUCCIONES -->
-  <div class="form-section">
-    <div class="form-group">
-      <label>Instrucciones</label>
-      <textarea formControlName="instructions" rows="4"></textarea>
-      @if (formulario.get('instructions')?.invalid && formulario.get('instructions')?.touched) {
-        <span class="error-text">Las instrucciones son requeridas</span>
-      }
-    </div>
-  </div>
-
-  <!-- IMAGEN -->
-  <div class="form-section">
-
-    <div class="form-group">
-      <label>URL Imagen</label>
-      <input formControlName="image" type="text" placeholder="https://..." />
-    </div>
-
-    <div style="display:flex; gap:10px;">
-      <label for="imageFile" class="secondary-btn">Subir imagen</label>
-      <button type="button"
-              class="delete-btn"
-              (click)="clearImage()">
-        ✕
-      </button>
-    </div>
-
-    <input #imageFile
-           id="imageFile"
-           type="file"
-           accept="image/*"
-           (change)="onImageSelected($event)"
-           hidden>
-
-  </div>
-
-  <!-- BOTÓN -->
-  <button type="submit"
-          class="primary-btn"
-          [disabled]="formulario.invalid">
-    Guardar receta
-  </button>
-
-  @if (formulario.invalid) {
-    <div class="error-banner">
-      ⚠️ Faltan campos obligatorios
-    </div>
-  }
-
-</form>
-
-<app-footer> </app-footer>
-=======
 <app-nav-bar-login></app-nav-bar-login>
 
-<form [formGroup]="formulario" (ngSubmit)="updateRecipe()">
+<form [formGroup]="formulario" (ngSubmit)="addRecipe2()">
   <span class="titulo">Crear receta</span>
-
+  
     <!-- Título -->
      <div class="datos">
       <label>
@@ -225,7 +57,6 @@
       </div>
       <button type="button" class="add-ingredient-button" (click)="agregarIngrediente()">Agregar ingrediente</button>
     </div>
-
 
     <!-- Tiempo de preparación -->
 
@@ -330,4 +161,3 @@
 
 
 
->>>>>>> c3586fe39cf84e1486403381312f83b654918010

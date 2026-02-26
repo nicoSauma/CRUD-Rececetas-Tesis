@@ -1,6 +1,10 @@
 import { Component, OnInit, inject } from '@angular/core';
 import {Router, RouterModule } from '@angular/router';
+<<<<<<< HEAD
 import { NavBarLoginComponent } from '../../navegadores/nav-bar-logeado/nav-bar-login.component';
+=======
+import { NavBarLoginComponent } from '../../navegadores/nav-bar-login/nav-bar-login.component';
+>>>>>>> c3586fe39cf84e1486403381312f83b654918010
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { ListasPersonalizadasComponent } from '../listas-personalizadas/listas-personalizadas.component';
 import { ListasPersonalizadasService } from '../../service/listas-personalizadas.service';
