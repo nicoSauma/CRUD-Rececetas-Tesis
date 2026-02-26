@@ -88,11 +88,5 @@ export interface ListaRecetasPersonalizadas {
     glutenFree:               boolean;
     readyInMinutes:           number;
     servings:                 number;
-<<<<<<< HEAD
     instructions:             string;
-=======
-    //image?:                    string;
-    instructions:             string;
-
->>>>>>> c3586fe39cf84e1486403381312f83b654918010
 }

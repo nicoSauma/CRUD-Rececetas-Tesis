@@ -1,5 +1,4 @@
 <app-nav-bar-login></app-nav-bar-login>
-<<<<<<< HEAD
 
 <section class="detalle-receta-section">
 
@@ -76,72 +75,3 @@
 </section>
 
 <app-footer></app-footer>
-=======
-<section>
-
-  <div *ngIf="recipe" class="recipe-container">
-
-    <h2 class="recipe-title">{{ recipe.title }}</h2>
-
-    <div class="cont-img">
-      <img [src]="recipe.image" alt="Imagen de {{ recipe.title }}" class="recipe-image" />
-    </div>
-
-
-    <!-- Información General -->
-    <div class="recipe-info">
-      <p><strong>Tiempo de preparación:</strong> {{ recipe.readyInMinutes }} minutos</p>
-      <p><strong>Calificación:</strong> {{ recipe.spoonacularScore.toFixed(2) }} / 100</p>
-    </div>
-
-    <!-- Ingredientes -->
-     <div class="cont-ingredientes">
-
-      <h3>Ingredientes</h3>
-      <div class="info-ingredientes">
-        <ul class="ingredient-list">
-          <li *ngFor="let ingredient of recipe.extendedIngredients">
-            {{ ingredient.amount.toFixed(1) }}
-            {{ingredient.name}}
-             {{ingredient.unit}}
-          </li>
-        </ul>
-      </div>
-     </div>
-
-
-    <!-- Instrucciones -->
-
-    <div class="cont-instrucciones">
-      <h3>Instrucciones</h3>
-      <ul>
-        <li *ngFor="let step of getInstructions()">
-          {{ step }}</li>
-      </ul>
-    </div>
-
-
-
-
-
-  <button class="add-to-list-btn" (click)="activarAgregarLista = true" >Agregar a una lista</button>
-
-  <section class="agregar-lista">
-    @if (activarAgregarLista) {<!-- seleccionar lista -->
-      <form [formGroup]="formulario" (ngSubmit)="addRecipe()">
-        <div class="select-button-container">
-          <label for="listaId"></label>
-          <select id="listaId" formControlName="listaId">
-            <option *ngFor="let lista of userComun.listas" [value]="lista.id">{{ lista.nombre }}</option>
-          </select>
-          <button type="submit" class="add-button">Agregar</button>
-        </div>
-      </form>
-    }
-  </section>
-
-  </div>
-</section>
-
-  <app-footer></app-footer>
->>>>>>> c3586fe39cf84e1486403381312f83b654918010

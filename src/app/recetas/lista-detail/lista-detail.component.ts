@@ -2,11 +2,7 @@ import { ListaRecetasPersonalizadas, Receta, RecipeInfo } from './../../interfac
 import { ChangeDetectorRef, Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ListasPersonalizadasService } from '../../service/listas-personalizadas.service';
-<<<<<<< HEAD
 import { NavBarLoginComponent } from '../../navegadores/nav-bar-logeado/nav-bar-login.component';
-=======
-import { NavBarLoginComponent } from '../../navegadores/nav-bar-login/nav-bar-login.component';
->>>>>>> c3586fe39cf84e1486403381312f83b654918010
 import { FooterComponent } from '../../shared/footer/footer.component';
 import { UsuariosService } from '../../service/usuarios.service';
 import { UserActivo } from '../../interfaces/user-activo';
@@ -17,21 +13,12 @@ import Swal from 'sweetalert2'
 @Component({
   selector: 'app-lista-detail',
   standalone: true,
-<<<<<<< HEAD
   imports: [NavBarLoginComponent, DeleteUpdateOutputComponent, FooterComponent],
-=======
-  imports: [NavBarLoginComponent, DeleteUpdateOutputComponent],
->>>>>>> c3586fe39cf84e1486403381312f83b654918010
   templateUrl: './lista-detail.component.html',
   styleUrl: './lista-detail.component.css'
 })
 export class ListaDetailComponent implements OnInit {
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> c3586fe39cf84e1486403381312f83b654918010
   userACT: UserActivo = {
     id: 0,
     nombreUsuario: ''
@@ -42,10 +29,7 @@ export class ListaDetailComponent implements OnInit {
     contrasena: '',
     listas: []
   };
-<<<<<<< HEAD
   
-=======
->>>>>>> c3586fe39cf84e1486403381312f83b654918010
   rutas = inject(Router)
   lista?: ListaRecetasPersonalizadas;
   route = inject(ActivatedRoute);

@@ -6,11 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from '../../navegadores/navbar/navbar.component';
 import { FooterComponent } from '../../shared/footer/footer.component';
-<<<<<<< HEAD
 import { NavBarLoginComponent } from '../../navegadores/nav-bar-logeado/nav-bar-login.component';
-=======
-import { NavBarLoginComponent } from '../../navegadores/nav-bar-login/nav-bar-login.component';
->>>>>>> c3586fe39cf84e1486403381312f83b654918010
 import { User } from '../../interfaces/user';
 import { UserActivo } from '../../interfaces/user-activo';
 import { UsuariosService } from '../../service/usuarios.service';

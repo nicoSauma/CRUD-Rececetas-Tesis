@@ -4,27 +4,16 @@ import { RegistrarseComponent } from './usuarios/registrarse/registrarse.compone
 import { IniciarSesionComponent } from './usuarios/iniciar-sesion/iniciar-sesion.component';
 import { PagInicioComponent } from './pages/pag-inicio/pag-inicio.component';
 import { RecetaDetailComponent } from './recetas/receta-detail/receta-detail.component';
-<<<<<<< HEAD
-=======
-import { RecetaFormComponent } from './recetas/receta-form/receta-form.component';
->>>>>>> c3586fe39cf84e1486403381312f83b654918010
 import { RecetaListComponent } from './recetas/receta-list/receta-list.component';
 import { ListasPersonalizadasComponent } from './recetas/listas-personalizadas/listas-personalizadas.component';
 import { MiListasComponent } from './recetas/mi-listas/mi-listas.component';
 import { PerfilPageComponent } from './pages/perfil-page/perfil-page.component';
-<<<<<<< HEAD
-=======
-import { Component } from '@angular/core';
->>>>>>> c3586fe39cf84e1486403381312f83b654918010
 import { RecetaUpdateComponent } from './recetas/receta-update/receta-update.component';
 import { ListaDetailComponent } from './recetas/lista-detail/lista-detail.component';
 import { DetalleMiReceteComponent } from './recetas/detalle-mi-recete/detalle-mi-recete.component';
 import { authUsuariosGuard } from './usuarios/auth-usuarios.guard/auth-usuarios.guard';
 import { EditarPerfilComponent } from './usuarios/editar-perfil/editar-perfil.component';
-<<<<<<< HEAD
 import { RecetaFormComponent } from './recetas/crear-receta/receta-form.component';
-=======
->>>>>>> c3586fe39cf84e1486403381312f83b654918010
 
 
 export const routes: Routes = [

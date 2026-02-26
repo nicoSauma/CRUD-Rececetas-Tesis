@@ -2,11 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { UsuariosService } from '../../service/usuarios.service';
 import { UserActivo } from '../../interfaces/user-activo';
 import { User } from '../../interfaces/user';
-<<<<<<< HEAD
 import { NavBarLoginComponent } from "../../navegadores/nav-bar-logeado/nav-bar-login.component";
-=======
-import { NavBarLoginComponent } from "../../navegadores/nav-bar-login/nav-bar-login.component";
->>>>>>> c3586fe39cf84e1486403381312f83b654918010
 import { FooterComponent } from "../../shared/footer/footer.component";
 import { RouterLink, RouterModule, Router } from '@angular/router';
 
