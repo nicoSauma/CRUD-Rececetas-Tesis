@@ -1,5 +1,10 @@
 {
-  "UsuarioActivo": [],
+  "UsuarioActivo": [
+    {
+      "id": "fda9",
+      "nombreUsuario": "Lucas"
+    }
+  ],
   "Usuarios": [
     {
       "id": "e237",
@@ -548,7 +553,7 @@
             },
             {
               "id": 2,
-              "title": "Prueba",
+              "title": "LAlalalala",
               "vegetarian": false,
               "vegan": true,
               "glutenFree": false,
@@ -557,7 +562,7 @@
               "instructions": "dasdfsfsdfsadf\nsad\nf\nsdaf\n\nasdf\n\nsdaf\nsdfasdfsdfasdfasdf\nasd\nf\nasd\nf\nasd",
               "image": "img/logoUltimo.jpeg",
               "spoonacularScore": 100,
-              "listaId": "0",
+              "listaId": 0,
               "ingredientes": [
                 {
                   "name": "adsdfmaklpñwe",
@@ -568,6 +573,11 @@
                   "name": "ñalalla",
                   "amount": 12,
                   "unit": "123"
+                },
+                {
+                  "name": "asdasdasd",
+                  "amount": 123,
+                  "unit": "aasdsda"
                 }
               ]
             },

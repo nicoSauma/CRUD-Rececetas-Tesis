@@ -6,11 +6,11 @@
   <section>
 
     <div class="buscador-section">
-      <h2>Buscador de recetas</h2>
+      <h2>Buscador de recetas por ingredientes</h2>
 
       <form [formGroup]="formulario" (ngSubmit)="setIngredientes()" class="form-busqueda">
         <div class="input-group">
-          <input type="text" name="ingredientes" id="ingredientes" formControlName="ingredientes" placeholder="Escribe ingredientes...">
+          <input type="text" name="ingredientes" id="ingredientes" formControlName="ingredientes" placeholder="Escribe ingredientes - Ej: Tomato, cheese, basil...">
           <button type="submit" class="btn-buscar" (click)="contenedorRecetas = true">Buscar</button>
         </div>
 
