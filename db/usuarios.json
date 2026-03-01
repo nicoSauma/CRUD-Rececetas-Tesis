@@ -279,64 +279,21 @@
               "ingredientes": [
                 {
                   "name": "plums",
-                  "unit": "",
-                  "amount": 24
+                  "amount": 24,
+                  "unit": "s"
                 },
                 {
                   "name": "wholes almonds",
-                  "unit": "",
-                  "amount": 24
+                  "amount": 24,
+                  "unit": "s"
                 },
                 {
                   "name": "chocolate",
-                  "unit": "ounces",
-                  "amount": 8
+                  "amount": 8,
+                  "unit": "ounces"
                 }
-              ]
-            },
-            {
-              "vegetarian": true,
-              "vegan": true,
-              "glutenFree": true,
-              "title": "Vegan Peanut Butter Chocolate Fudge",
-              "readyInMinutes": 45,
-              "servings": 6,
-              "image": "https://img.spoonacular.com/recipes/664473-556x370.jpg",
-              "instructions": "Combine all ingredients in a food processor until smooth.\nFold mixture into a flat, sealable container and freeze for 1 hour or refrigerate overnight.\nTo make your own coconut butter, pulse shredded coconut in a food processor until smooth; about 8-12 minutes.",
-              "spoonacularScore": 41.759586334228516,
-              "id": 664473,
-              "ingredientes": [
-                {
-                  "name": "coconut butter",
-                  "unit": "cup",
-                  "amount": 0.5
-                },
-                {
-                  "name": "peanut butter",
-                  "unit": "tablespoon",
-                  "amount": 1
-                },
-                {
-                  "name": "bananas",
-                  "unit": "",
-                  "amount": 2
-                },
-                {
-                  "name": "cocoa powder",
-                  "unit": "tablespoons",
-                  "amount": 3
-                },
-                {
-                  "name": "agave nectar",
-                  "unit": "tablespoons",
-                  "amount": 2
-                },
-                {
-                  "name": "vanilla extract",
-                  "unit": "teaspoon",
-                  "amount": 1
-                }
-              ]
+              ],
+              "listaId": "2"
             },
             {
               "id": 3,

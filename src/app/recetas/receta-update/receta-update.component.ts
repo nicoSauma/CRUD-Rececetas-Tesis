@@ -157,49 +157,59 @@ formulario=this.fb.nonNullable.group({
 
 
   updateRecipe() {
-    if (this.formulario.invalid || this.id === null) return;
 
-    // Obtiene el valor del formulario y asegura que `ingredientes` sea del tipo `Ingredientes[]`
-    const recetaFormValue = this.formulario.getRawValue();
-    const receta: Receta = {
-      ...recetaFormValue,
-      ingredientes: recetaFormValue.ingredientes.map((ing: any) => ({
-        id: ing.id,
-        name: ing.name,
-        amount: ing.amount,
-        unit: ing.unit
-      }))
-    };
+  if (this.formulario.invalid || this.id === null) return;
 
+  const recetaFormValue = this.formulario.getRawValue();
 
-    const listaIdSeleccionada = Number(this.formulario.get('listaId')?.value);
+  const recetaActualizada: Receta = {
+    ...recetaFormValue,
+    id: this.id,
+    ingredientes: recetaFormValue.ingredientes.map((ing: any) => ({
+      name: ing.name,
+      amount: ing.amount,
+      unit: ing.unit
+    }))
+  };
 
-const listaSeleccionada = this.userComun.listas.find(
-  lista => lista.id === listaIdSeleccionada
-);
+  const nuevaListaId = Number(this.formulario.get('listaId')?.value);
 
-    if (listaSeleccionada) {
-      const recetaIndex = listaSeleccionada.recetas.findIndex(r => r.id === this.id);
+  // buscar lista ORIGINAL
+  const listaOriginal = this.userComun.listas.find(lista =>
+    lista.recetas.some(r => r.id === this.id)
+  );
 
-      if (recetaIndex !== -1) {
-        listaSeleccionada.recetas[recetaIndex] = { ...listaSeleccionada.recetas[recetaIndex], ...receta };
+  //  buscar lista DESTINO
+  const listaDestino = this.userComun.listas.find(
+    lista => lista.id === nuevaListaId
+  );
 
-        this.servicio.editUser(this.userComun).subscribe({
-          next: () => {
-           this.alertModificado();
-            this.router.navigate(['/mis-listas']);
-          },
-          error: (e: Error) => {
-            console.error("Error al modificar la receta:", e);
-          }
-        });
-      } else {
-        console.error('Receta no encontrada en la lista.');
-      }
-    } else {
-      console.error("Lista seleccionada no encontrada.");
-    }
+  if (!listaOriginal || !listaDestino) {
+    console.error("Lista no encontrada");
+    return;
   }
+
+  //  eliminar de lista original
+  const indexOriginal = listaOriginal.recetas.findIndex(r => r.id === this.id);
+
+  if (indexOriginal !== -1) {
+    listaOriginal.recetas.splice(indexOriginal, 1);
+  }
+
+  //  agregar a nueva lista
+  listaDestino.recetas.push(recetaActualizada);
+
+  //  guardar usuario actualizado
+  this.servicio.editUser(this.userComun).subscribe({
+    next: () => {
+      this.alertModificado();
+      this.router.navigate(['/mis-listas']);
+    },
+    error: (e: Error) => {
+      console.error("Error al modificar receta:", e);
+    }
+  });
+}
 
 
  get ingredientes(){
