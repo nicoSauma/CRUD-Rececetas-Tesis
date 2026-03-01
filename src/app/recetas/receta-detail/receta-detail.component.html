@@ -14,14 +14,23 @@
     </div>
 
     <!-- Info rápida -->
-    <div class="recipe-stats">
-      <div class="stat">
-        ⏱ {{ recipe.readyInMinutes }} min
-      </div>
-      <div class="stat">
-        ⭐ {{ recipe.spoonacularScore.toFixed(0) }} / 100
-      </div>
-    </div>
+    <div class="recipe-stats"><div class="recipe-stats">
+  <div class="stat">
+    ⏱ {{ recipe.readyInMinutes }} min
+  </div>
+
+  <div class="stat">
+    ⭐ {{ recipe.spoonacularScore.toFixed(0) }} / 100
+  </div>
+
+  <div class="stat">
+    🍽 {{ recipe.servings }} porciones
+  </div>
+</div>
+    
+
+</div>
+
 
     <!-- Ingredientes -->
     <div class="section-card">

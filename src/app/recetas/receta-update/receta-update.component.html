@@ -43,7 +43,7 @@
     <div class="ingredientes-container"
          formArrayName="ingredientes">
 
-      @for (ingrediente of ingredientes.controls; track $index; let i = $index) {
+      @for (ingrediente of ingredientes.controls; track ingrediente; let i = $index) {
         <div class="ingrediente-card"
              [formGroupName]="i">
 
@@ -99,6 +99,7 @@
       }
     </div>
 
+     <!-- 
     <div class="form-group">
       <label>Lista</label>
       <select formControlName="listaId">
@@ -108,6 +109,7 @@
         }
       </select>
     </div>
+    -->
 
   </div>
 

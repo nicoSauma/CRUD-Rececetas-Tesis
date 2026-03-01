@@ -37,6 +37,7 @@
      <div class="datos">
       <h3 class="ingredientesTitulo">Ingredientes</h3>
       <div class="ingredientes-contenedor" formArrayName="ingredientes">
+        
         <div *ngFor="let ingrediente of ingredientes.controls; let i = index" [formGroupName]="i" class="ingrediente-item">
           <div>
             <label>

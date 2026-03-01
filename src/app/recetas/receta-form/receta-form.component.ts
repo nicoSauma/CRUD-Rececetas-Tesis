@@ -173,6 +173,7 @@ agregarIngrediente(){
   });
   this.ingredientes.push(ingredienteForm)
 }
+
 eliminarIngrediente(index: number) {
   this.ingredientes.removeAt(index);
 }

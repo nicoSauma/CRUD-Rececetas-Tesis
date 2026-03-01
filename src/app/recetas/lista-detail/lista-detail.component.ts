@@ -61,17 +61,17 @@ export class ListaDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
+    const id = this.route.snapshot.paramMap.get('id'); 
 
     if (id) {
-      this.servicioUser.getUserActivo().subscribe({
+      this.servicioUser.getUserActivo().subscribe({ // el servicio devuelve el array y tomamos la primer posicion
         next: (userEncontrado) => {
           this.userACT = userEncontrado[0];
           this.servicioUser.getUSerById(this.userACT.id).subscribe({
             next: (usuario) => {
               this.userComun = usuario;
               this.lista = this.userComun.listas.find((lista: any) => lista.id === Number(id));
-              this.cargararreglo();
+              this.cargararreglo(); // cargamos la info del usuario para mostrarla 
             },
             error: (err: Error) => {
               console.log(err.message);

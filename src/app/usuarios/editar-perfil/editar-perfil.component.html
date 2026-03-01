@@ -43,13 +43,19 @@
   </div>
 
   @if (formulario.controls['contrasena'].touched) {
-    @if (formulario.controls['contrasena'].getError('required')) {
-      <span class="requerido">La contraseña no puede estar vacía</span>
-    }
-    @if (formulario.controls['contrasena'].getError('minlength')) {
-      <span class="requerido">La contraseña es muy corta</span>
-    }
+
+  @if (formulario.controls['contrasena'].getError('required')) {
+    <span class="requerido">La contraseña no puede estar vacía</span>
   }
+
+  @if (formulario.controls['contrasena'].getError('pattern')) {
+    <span class="requerido">
+      La contraseña debe tener:
+      8–16 caracteres, al menos una mayúscula y un número
+    </span>
+  }
+
+}
 
 </div>
 

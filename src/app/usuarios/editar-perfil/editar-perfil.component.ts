@@ -37,7 +37,10 @@ export class EditarPerfilComponent implements OnInit {
 
   formulario=this.fb.nonNullable.group({
     nombre:['',[Validators.required, Validators.minLength(4)]],
-    contrasena:['',[Validators.required, Validators.minLength(6)]]
+    contrasena: ['', [
+  Validators.required,
+  Validators.pattern(/^(?=.*[A-Z])(?=.*\d).{8,16}$/)
+]]
   })
 
    ngOnInit(): void {

@@ -13,6 +13,7 @@ export class UsuariosService {
   constructor() { }
 
   private activeUserSubject = new BehaviorSubject<UserActivo| undefined>(undefined);
+  
   urlUsuarios= 'http://localhost:3000/Usuarios';
   urlActivo = "http://localhost:3000/UsuarioActivo"
   http= inject(HttpClient);
@@ -42,8 +43,8 @@ loginChat(username: string, password: string): Observable<User | null> {
           // Buscar el usuario que coincida tanto en el nombre de usuario como en la contraseña
           const user = users.find(u => u.nombreUsuario === username && u.contrasena === password);
           if (user) {
-              this.activeUserSubject.next({ nombreUsuario: user.nombreUsuario, id: user.id! });
-              localStorage.setItem('token', user.id?.toString()!);
+              this.activeUserSubject.next({ nombreUsuario: user.nombreUsuario, id: user.id! }); // Actualiza el usuario activo
+              localStorage.setItem('token', user.id?.toString()!); //Guarda token en el localStorage mantener sesion
               return user;
           }
           return null; // Si no encuentra el usuario, retorna null

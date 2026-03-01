@@ -172,7 +172,11 @@ formulario=this.fb.nonNullable.group({
     };
 
 
-    const listaSeleccionada = this.userComun.listas.find(lista => lista.id === this.idLista);
+    const listaIdSeleccionada = Number(this.formulario.get('listaId')?.value);
+
+const listaSeleccionada = this.userComun.listas.find(
+  lista => lista.id === listaIdSeleccionada
+);
 
     if (listaSeleccionada) {
       const recetaIndex = listaSeleccionada.recetas.findIndex(r => r.id === this.id);

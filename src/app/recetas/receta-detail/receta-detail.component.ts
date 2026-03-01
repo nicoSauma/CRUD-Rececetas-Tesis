@@ -20,6 +20,7 @@ import Swal from 'sweetalert2'
 export class RecetaDetailComponent implements OnInit{
 
   recipe!: RecipeInfo;
+
   serviciouser = inject(UsuariosService);
   fb = inject(FormBuilder)
   activarAgregarLista : boolean = false;
@@ -96,18 +97,20 @@ export class RecetaDetailComponent implements OnInit{
   addRecipe() {
     
     const receta = this.mapearRecipeInfoAReceta(this.recipe);
+
     const listaId = this.formulario.get('listaId')?.value;
     console.log('ID de lista seleccionada:', listaId);
 
-    // Encuentra la lista seleccionada en el usuario y agrega la receta
+    // Busca la lista seleccionada en el usuario 
     const listaSeleccionada = this.userComun.listas.find(lista => lista.id === Number(listaId));
     console.log(listaSeleccionada);
 
 
+    //si encuentra la lista guarda la receta
     if (listaSeleccionada) {
       listaSeleccionada.recetas.push(receta);
 
-
+    // Guarda el usuario actualizado con la lista nueva
       this.serviciouser.editUser(this.userComun).subscribe({
         next: () => {
           this.alertRecetaAdd();
@@ -136,7 +139,7 @@ export class RecetaDetailComponent implements OnInit{
       id: recipeInfo.id,
       ingredientes: recipeInfo.extendedIngredients.map(
         this.mapearExtendIngredientAIngrediente
-      )// como ingredientes pertenece a Recetas al mapear Recetas, tambien se mapean los Ingredientes
+      )
     };
   }
 
